@@ -6,6 +6,7 @@ import Footballstatistics from "./Footballstatistics";
 import Comparisontable from "./Comparisontable";
 import Saved_and_main_players_table from "./Saved_and_main_players_table";
 import Togglingnews from "./Togglingnews";
+import Videoplayer from "./Videoplayer";
 
 class Footballgamepage extends Component {
 
@@ -13,7 +14,7 @@ class Footballgamepage extends Component {
         super(props, context);
         this.state={
             imageaddresses: [{soobasa}, {soobasa}, {soobasa}],
-            video_link:"lablab",
+            video:"https://media.w3.org/2010/05/sintel/trailer_hd.mp4",
             text_of_report:"ipsum dolor sit amet, consectetuer adipiscing elit.Donec hendrerit" +
                 "ipsum dolor sit amet, consectetuer adipiscing elit.Donec hendrerit" +
                 "ipsum dolor sit amet, consectetuer adipiscing elit.Donec hendrerit" +
@@ -199,6 +200,27 @@ class Footballgamepage extends Component {
                             textofnews={this.state.text_of_report}
                         />
                         <br/>
+                    </Row>
+                    <Row>
+                        <br/>
+                        <h3>
+                            <b>
+                                <i>
+                                    فیلم بازی
+                                </i>
+                            </b>
+                        </h3>
+                        <br/>
+                        <hr/>
+                        <br/>
+                    </Row>
+
+                    <Row>
+                        <Col xs={12} md={8}>
+                            <Videoplayer
+                                video={this.state.video}
+                            />
+                        </Col>
                     </Row>
                 </Grid>
             </div>
