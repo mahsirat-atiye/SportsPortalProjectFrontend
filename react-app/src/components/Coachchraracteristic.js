@@ -3,7 +3,7 @@ import {Thumbnail, Button, Col,ListGroupItem} from "react-bootstrap";
 import soobasa from "./soobasa.jpg"
 import ListGroup from "react-bootstrap/es/ListGroup";
 
-class Chraracteristicplayer extends Component {
+class Coachchraracteristic extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -27,4 +27,4 @@ class Chraracteristicplayer extends Component {
 
 }
 
-export default Chraracteristicplayer
+export default Coachchraracteristic

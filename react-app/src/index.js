@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 // import Togglingnews from './components/Togglingnews'
 
 // import Listoftogglingnews from './components/Listoftogglingnews'
-// import Chraracteristicplayer from './components/Chraracteristicplayer'
+// import Coachchraracteristic from './components/Coachchraracteristic'
 // import Listofplayers from './components/Listofplayers'
 
 //import Footballplayerpage from './components/Footballplayerpage'

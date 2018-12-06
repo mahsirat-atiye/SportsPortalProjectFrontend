@@ -4,7 +4,7 @@ import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
 import Gamecharacteristics from "./Gamecharacteristics";
-import Chraracteristicplayer from "./Chraracteristicplayer";
+import Coachchraracteristic from "./Coachchraracteristic";
 
 class Teampage extends Component {
 
@@ -176,7 +176,7 @@ class Teampage extends Component {
                     <Row>
                         {
                             this.state.not_main_players.map(c => <Col xs={6} md={4}>
-                                <Chraracteristicplayer
+                                <Coachchraracteristic
                                     key={c.id}
                                     id={c.id}
                                     imageaddresses={c.imageaddresses}

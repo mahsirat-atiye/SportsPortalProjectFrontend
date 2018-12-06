@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button, ButtonGroup, Grid, Row} from "react-bootstrap";
-import Chraracteristicplayer from "./Chraracteristicplayer";
+import Coachchraracteristic from "./Coachchraracteristic";
 
 class Listofplayers extends Component {
 
@@ -46,7 +46,7 @@ class Listofplayers extends Component {
 
                 <Grid>
                     <Row>
-                        {this.state.players.map(p => <Chraracteristicplayer
+                        {this.state.players.map(p => <Coachchraracteristic
                             key={p.id}
                             playername={p.name}
                             id={p.id}
