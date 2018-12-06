@@ -15,8 +15,9 @@ import * as serviceWorker from './serviceWorker';
 //import Timeline_ from './components/Timeline_'
 import Videoplayer from './components/Videoplayer'
 //import Gamecharacteristics from './components/Gamecharacteristics'
-import Teampage from './components/Teampage'
-ReactDOM.render(<Teampage/>, document.getElementById('root'));
+//import Teampage from './components/Teampage'
+import Comparisontable from './components/Comparisontable'
+ReactDOM.render(<Comparisontable/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
