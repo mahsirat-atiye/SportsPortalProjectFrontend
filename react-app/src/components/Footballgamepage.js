@@ -3,7 +3,7 @@ import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstr
 import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
-import Comparisontable from "./Comparisontable";
+import Comparisontable_football from "./Comparisontable_football";
 import Saved_and_main_players_table from "./Saved_and_main_players_table";
 import Togglingnews from "./Togglingnews";
 import Videoplayer from "./Videoplayer";
@@ -214,7 +214,7 @@ class Footballgamepage extends Component {
                     <Row>
                         <Col xs={12} md={8}>
                             {
-                                <Comparisontable
+                                <Comparisontable_football
                                 teams = {this.state.teams}
                                 />
                             }

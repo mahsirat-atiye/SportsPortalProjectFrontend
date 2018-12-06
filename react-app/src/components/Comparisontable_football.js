@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import { Table} from "react-bootstrap";
 import soobasa from "./soobasa.jpg";
 
-class Comparisontable extends Component {
+class Comparisontable_football extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -82,4 +82,4 @@ class Comparisontable extends Component {
             </Table>
         );
     }
-}export default Comparisontable
+}export default Comparisontable_football
