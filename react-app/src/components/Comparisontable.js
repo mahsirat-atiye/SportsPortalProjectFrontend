@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Togglingnews from "./Togglingnews";
-import {PanelGroup, ButtonGroup, Button , Table} from "react-bootstrap";
+
+import { Table} from "react-bootstrap";
 import soobasa from "./soobasa.jpg";
 
 class Comparisontable extends Component {
