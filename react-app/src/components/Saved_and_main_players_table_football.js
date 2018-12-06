@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {Table} from "react-bootstrap";
 import soobasa from "./soobasa.jpg";
 
-class Saved_and_main_players_table extends Component {
+class Saved_and_main_players_table_football extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -65,4 +65,4 @@ class Saved_and_main_players_table extends Component {
     }
 }
 
-export default Saved_and_main_players_table
+export default Saved_and_main_players_table_football
