@@ -38,7 +38,7 @@ class Saved_and_main_players_table_basketball extends Component {
 
                         <td>{p.rebounds}</td>
                         <td>{p.time_of_playing}</td>
-                        <td>{p.tree_point_throws}</td>
+                        <td>{p.three_point_throws}</td>
                         <td>{p.two_point_trows}</td>
                         <td>{p.name + " "+ p.familyname}</td>
                     </tr>
@@ -64,7 +64,7 @@ class Saved_and_main_players_table_basketball extends Component {
 
                         <td>{p.rebounds}</td>
                         <td>{p.time_of_playing}</td>
-                        <td>{p.tree_point_throws}</td>
+                        <td>{p.three_point_throws}</td>
                         <td>{p.two_point_trows}</td>
                         <td>{p.name + " "+ p.familyname}</td>
                     </tr>

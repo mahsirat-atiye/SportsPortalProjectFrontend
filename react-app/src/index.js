@@ -18,8 +18,8 @@ import Videoplayer from './components/Videoplayer'
 //import Teampage from './components/Teampage'
 //import Comparisontable_football from './components/Comparisontable_football'
 //import Saved_and_main_players_table_football from './components/Saved_and_main_players_table_football'
-import Footballgamepage from './components/Footballgamepage'
-ReactDOM.render(<Footballgamepage/>, document.getElementById('root'));
+import Basketballgamepage from './components/Basketballgamepage'
+ReactDOM.render(<Basketballgamepage/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
