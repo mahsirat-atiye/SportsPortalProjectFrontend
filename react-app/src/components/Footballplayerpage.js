@@ -77,14 +77,14 @@ class Footballplayerpage extends Component {
     render() {
         return (
             <div>
-                <marquee>
+                {/*<marquee>*/}
                     <h2 style={{
                         fontSize: '130px',
                         textAlign: 'center',
                         fontStyle: 'italic',
                         margin: '40px'
                     }}>{this.state.name} </h2>
-                </marquee>
+                {/*</marquee>*/}
                 <Grid>
                     <Row>
                         <Col xs={12} md={8}>
