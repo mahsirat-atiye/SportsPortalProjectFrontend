@@ -142,6 +142,21 @@ class Teampage extends Component {
 
                 },
             ],
+            lastnews: [
+                {
+                    news: 'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+                    headnews: "heading of news & discription 1"
+                },
+                {
+                    news: 'Nulla posuere.Donec vitae dolor.Nullam tristique diam non turpis.Cras placerat accumsan nulla.Nullam rutrum.Nam vestibulum accumsan nisl.',
+                    headnews: "heading of news & discription 2"
+                },
+                {
+                    news: 'ipsum dolor sit amet, consectetuer adipiscing elit.Donec hendrerit tempor tellus Donec pretium posuere tellus.',
+                    headnews: "heading of news & discription 3"
+                },
+
+            ],
 
 
         }
@@ -177,13 +192,13 @@ class Teampage extends Component {
                     </Row>
                     <Row>
                         <br/>
-                        <h3>
+                        <h2>
                             <b>
                                 <i>
                                     Plays
                                 </i>
                             </b>
-                        </h3>
+                        </h2>
                         <hr/>
 
                         <DropdownButton title="Sort by" id="bg-nested-dropdown">
@@ -215,13 +230,24 @@ class Teampage extends Component {
                     </Row>
                     <Row>
                         <br/>
-                        <h3>
+                        <h2>
                             <b>
                                 <i>
                                     Team members
                                 </i>
                             </b>
-                        </h3>
+                        </h2>
+
+                    </Row>
+                    <Row>
+                        <br/>
+                        <h4>
+                            <b>
+                                <i>
+                                    Coaches
+                                </i>
+                            </b>
+                        </h4>
                         <hr/>
                         <br/>
                     </Row>
@@ -245,7 +271,21 @@ class Teampage extends Component {
                     </Row>
                     <Row>
                         <br/>
+                        <h4>
+                            <b>
+                                <i>
+                                    Main players
+                                </i>
+                            </b>
+                        </h4>
                         <hr/>
+                        <br/>
+                        <DropdownButton title="Filter by" id="bg-nested-dropdown">
+                            <MenuItem eventKey="1">All</MenuItem>
+                            <MenuItem eventKey="2">Half backs</MenuItem>
+                            <MenuItem eventKey="3">Half fronts</MenuItem>
+                        </DropdownButton>
+                        <br/>
                         <br/>
                     </Row>
 
@@ -267,6 +307,43 @@ class Teampage extends Component {
                             </Col>)
                         }
                     </Row>
+                    <Row>
+                        <br/>
+                        <h2>
+                            <b>
+                                <i>
+                                    News
+                                </i>
+                            </b>
+                        </h2>
+                        <hr/>
+                        <br/>
+
+                    </Row>
+
+                    {this.state.lastnews.map(c =>
+                        <Row>
+                            <Media>
+                                <Media.Left align="middle">
+                                    <img width={128} height={128} src={soobasa} alt="thumbnail"/>
+                                </Media.Left>
+                                <Media.Body>
+                                    <Media.Heading>{c.headnews}</Media.Heading>
+                                    <p>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                        ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+                                        tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                                        fringilla. Donec lacinia congue felis in faucibus.
+                                    </p>
+
+                                    <p>
+                                        {c.news}
+                                    </p>
+                                </Media.Body>
+                            </Media>
+                            <br/> <br/> <br/>
+                        </Row>
+                    )}
 
                     <Row>
                         <Col xs={12} md={8}></Col>
