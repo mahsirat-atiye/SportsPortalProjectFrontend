@@ -4,7 +4,7 @@ import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
 import Comparisontable_football from "./Comparisontable_football";
-import Saved_and_main_players_table from "./Saved_and_main_players_table";
+import Saved_and_main_players_table_football from "./Saved_and_main_players_table_football";
 import Togglingnews from "./Togglingnews";
 import Videoplayer from "./Videoplayer";
 import Timeline_ from "./Timeline_";
@@ -225,7 +225,7 @@ class Footballgamepage extends Component {
                         {
                             this.state.teams.map(t =>
                                 <Col xs={6} md={6}>
-                                    <Saved_and_main_players_table
+                                    <Saved_and_main_players_table_football
                                         key={t.id}
                                         id={t.id}
                                         name={t.name}
