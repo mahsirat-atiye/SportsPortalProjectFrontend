@@ -313,7 +313,7 @@ class Footballgamepage extends Component {
                         <h3>
                             <b>
                                 <i>
-                                    اخبار و پیش بینی های پس از بازی
+                                    اخبار و پیش بینی های پیش از بازی
                                 </i>
                             </b>
                         </h3>
@@ -321,6 +321,30 @@ class Footballgamepage extends Component {
                         <hr/>
                         <br/>
                     </Row>
+                    {this.state.news_before.map(c =>
+                        <Row>
+                            <Media>
+                                <Media.Left align="middle">
+                                    <img width={64} height={64} src={soobasa} alt="thumbnail"/>
+                                </Media.Left>
+                                <Media.Body>
+                                    <Media.Heading>{c.headnews}</Media.Heading>
+                                    <p>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                        ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+                                        tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                                        fringilla. Donec lacinia congue felis in faucibus.
+                                    </p>
+
+                                    <p>
+                                        {c.news}
+                                    </p>
+                                </Media.Body>
+                            </Media>
+                            <br/><br/><br/>
+                        </Row>
+                    )}
+
                     <Row>
                         <br/>
                         <h3>
@@ -334,6 +358,30 @@ class Footballgamepage extends Component {
                         <hr/>
                         <br/>
                     </Row>
+                    {this.state.news_after.map(c =>
+                        <Row>
+                            <Media>
+                                <Media.Left align="middle">
+                                    <img width={64} height={64} src={soobasa} alt="thumbnail"/>
+                                </Media.Left>
+                                <Media.Body>
+                                    <Media.Heading>{c.headnews}</Media.Heading>
+                                    <p>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                        ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+                                        tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                                        fringilla. Donec lacinia congue felis in faucibus.
+                                    </p>
+
+                                    <p>
+                                        {c.news}
+                                    </p>
+                                </Media.Body>
+                            </Media>
+                            <br/><br/><br/>
+                        </Row>
+                    )}
+
 
                 </Grid>
             </div>
