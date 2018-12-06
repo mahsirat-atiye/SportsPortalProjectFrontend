@@ -7,29 +7,7 @@ class Saved_and_main_players_table extends Component {
 
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            name: "استقلال",
-            mainplayers: [
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-                {name: "Alireza", familyname: "Daee", time_of_change: 9},
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-                {name: "Ali", familyname: "Daee", time_of_change: 19},
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-                {name: "Ali", familyname: "Daee", time_of_change: null},
-                {name: "Ali", familyname: "Daee", time_of_change: null},
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-            ],
-            savedplayers: [
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-                {name: "Alireza", familyname: "Daee", time_of_change: 9},
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-                {name: "Ali", familyname: "Daee", time_of_change: 19},
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-                {name: "Ali", familyname: "Daee", time_of_change: null},
-                {name: "Ali", familyname: "Daee", time_of_change: null},
-                {name: "Ali", familyname: "Daee", time_of_change: 9},
-            ]
-        }
+
     }
 
     render() {
@@ -37,7 +15,9 @@ class Saved_and_main_players_table extends Component {
             <Table responsive striped bordered condensed hover>
                 <thead>
                 <th>
-                    {this.state.name}
+                    <tr>
+                    {this.props.name}
+                    </tr>
                 </th>
                 </thead>
 
@@ -51,7 +31,7 @@ class Saved_and_main_players_table extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {this.state.mainplayers.map(p =>
+                {this.props.mainplayers.map(p =>
                     <tr>
 
 
@@ -71,7 +51,7 @@ class Saved_and_main_players_table extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {this.state.savedplayers.map(p =>
+                {this.props.savedplayers.map(p =>
                     <tr>
 
 

@@ -4,6 +4,7 @@ import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
 import Comparisontable from "./Comparisontable";
+import Saved_and_main_players_table from "./Saved_and_main_players_table";
 
 class Footballgamepage extends Component {
 
@@ -22,6 +23,7 @@ class Footballgamepage extends Component {
             time: "1976 Dec 17 , 13:30  ",
             teams:[
                 {
+                    id:1,
                     name:"استقلال",
                     corners:6,
                     errs:6,
@@ -53,6 +55,7 @@ class Footballgamepage extends Component {
                     ]
                 },
                 {
+                    id:2,
                     name:"پرسپولیس",
                     corners:6,
                     errs:6,
@@ -172,6 +175,21 @@ class Footballgamepage extends Component {
                             }
 
                         </Col>
+                    </Row>
+                    <Row>
+                        {
+                            this.state.teams.map(t =>
+                                <Col xs={6} md={6}>
+                                    <Saved_and_main_players_table
+                                        key={t.id}
+                                        id={t.id}
+                                        name={t.name}
+                                        mainplayers={t.mainplayers}
+                                        savedplayers={t.savedplayers}
+                                    />
+                                </Col>
+                            )
+                        }
                     </Row>
                 </Grid>
             </div>
