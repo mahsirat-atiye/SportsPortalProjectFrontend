@@ -24,7 +24,7 @@ class Gamecharacteristics extends Component {
                     <ListGroupItem>Result
                         : {this.props.first_team + " won over " + this.props.second_team}</ListGroupItem>
                     {/*TODO : if clause needed to understand from scores*/}
-                    <ListGroupItem> <Button className={"btn-block btn-large btn-danger"}>More
+                    <ListGroupItem> <Button className={"btn-block btn-large btn-success"}>More
                         Info</Button></ListGroupItem>
                 </Panel.Body>
             </Panel>

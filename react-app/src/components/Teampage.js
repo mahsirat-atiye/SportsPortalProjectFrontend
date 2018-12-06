@@ -5,6 +5,7 @@ import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
 import Gamecharacteristics from "./Gamecharacteristics";
 import Coachchraracteristic from "./Coachchraracteristic";
+import Playercharacteristics from "./Playercharacteristics"
 
 class Teampage extends Component {
 
@@ -89,7 +90,58 @@ class Teampage extends Component {
                     position: "Coach",
 
                 },
-            ]
+            ],
+
+            main_players: [
+                {
+                    id: 1,
+                    imageaddresses: {soobasa},
+                    name: "Soobassa",
+                    familyname: "Malek Zade",
+                    position: "Half back",
+
+                },
+                {
+                    id: 2,
+                    imageaddresses: {soobasa},
+                    name: "Ahmad",
+                    familyname: "Malek Zade",
+                    position: "GoalKeeper",
+
+                },
+                {
+                    id: 3,
+                    imageaddresses: {soobasa},
+                    name: "Asghar",
+                    familyname: "Malek Zade",
+                    position: "Half front",
+
+                },
+                {
+                    id: 4,
+                    imageaddresses: {soobasa},
+                    name: "Soobassa",
+                    familyname: "Malek Zade",
+                    position: "Half back",
+
+                },
+                {
+                    id: 5,
+                    imageaddresses: {soobasa},
+                    name: "Ahmad",
+                    familyname: "Malek Zade",
+                    position: "GoalKeeper",
+
+                },
+                {
+                    id: 6,
+                    imageaddresses: {soobasa},
+                    name: "Asghar",
+                    familyname: "Malek Zade",
+                    position: "Half front",
+
+                },
+            ],
 
 
         }
@@ -190,7 +242,32 @@ class Teampage extends Component {
                                 />
                             </Col>)
                         }
-                    </Row>.
+                    </Row>
+                    <Row>
+                        <br/>
+                        <hr/>
+                        <br/>
+                    </Row>
+
+                    <Row>
+                        {
+                            this.state.main_players.map(c => <Col xs={6} md={4}>
+                                <Playercharacteristics
+                                    key={c.id}
+                                    id={c.id}
+                                    imageaddresses={c.imageaddresses}
+                                    //because of problem in loading image i passed soobasa directly
+                                    //to Characteristicplayer
+                                    // TODO:
+                                    // problem of loding img must be solve and Characteristicplayer : line 16 change
+                                    name={c.name}
+                                    familyname={c.familyname}
+                                    position={c.position}
+                                />
+                            </Col>)
+                        }
+                    </Row>
+
                     <Row>
                         <Col xs={12} md={8}></Col>
                         <Col xs={6} md={3}></Col>
