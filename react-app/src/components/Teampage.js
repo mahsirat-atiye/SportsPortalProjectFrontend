@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Carousel, Media, Col, Row, ListGroup, ListGroupItem, DropdownButton, MenuItem} from "react-bootstrap";
+import {Carousel, Media, Col, Row, ListGroup, ListGroupItem, DropdownButton, MenuItem, Button} from "react-bootstrap";
 import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
@@ -174,7 +174,7 @@ class Teampage extends Component {
                     }}>{this.state.name} </h2>
                 </marquee>
                 <Grid>
-                    <Row>
+                    <Row><Col xs={12} md={8}>
 
                         <Carousel>
                             {this.state.imageaddresses.map(img => <Carousel.Item>
@@ -188,8 +188,19 @@ class Teampage extends Component {
 
 
                         </Carousel>
+                    </Col>
 
                     </Row>
+                    <Row>
+                        <div >
+                        <br/><br/>
+                        <Col xs={12} md={8}>
+                            <Button className={"btn-block btn-large btn-danger"} bsSize="large">Add this team to my favorite teams</Button>
+                        </Col>
+                        <br/>
+                        </div>
+                    </Row>
+                    {/*TODO   this 2 part shoult get to center*/}
                     <Row>
                         <br/>
                         <h2>
