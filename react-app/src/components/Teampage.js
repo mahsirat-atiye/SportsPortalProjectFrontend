@@ -4,6 +4,7 @@ import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
 import Gamecharacteristics from "./Gamecharacteristics";
+import Chraracteristicplayer from "./Chraracteristicplayer";
 
 class Teampage extends Component {
 
@@ -62,7 +63,34 @@ class Teampage extends Component {
 
 
                 },
+            ],
+            not_main_players: [
+                {
+                    id: 1,
+                    imageaddresses: {soobasa},
+                    name: "Soobassa",
+                    familyname: "Malek Zade",
+                    position: "Coach",
+
+                },
+                {
+                    id: 2,
+                    imageaddresses: {soobasa},
+                    name: "Ahmad",
+                    familyname: "Malek Zade",
+                    position: "Coach",
+
+                },
+                {
+                    id: 3,
+                    imageaddresses: {soobasa},
+                    name: "Asghar",
+                    familyname: "Malek Zade",
+                    position: "Coach",
+
+                },
             ]
+
 
         }
     }
@@ -134,7 +162,38 @@ class Teampage extends Component {
                         }
                     </Row>
                     <Row>
+                        <br/>
+                        <h3>
+                            <b>
+                                <i>
+                                    Team members
+                                </i>
+                            </b>
+                        </h3>
+                        <hr/>
+                        <br/>
+                    </Row>
+                    <Row>
+                        {
+                            this.state.not_main_players.map(c => <Col xs={6} md={4}>
+                                <Chraracteristicplayer
+                                    key={c.id}
+                                    id={c.id}
+                                    imageaddresses={c.imageaddresses}
+                                    //because of problem in loading image i passed soobasa directly
+                                    //to Characteristicplayer
+                                    // TODO:
+                                    // problem of loding img must be solve and Characteristicplayer : line 16 change
+                                    name={c.name}
+                                    familyname={c.familyname}
+                                    position={c.position}
+                                />
+                            </Col>)
+                        }
+                    </Row>.
+                    <Row>
                         <Col xs={12} md={8}></Col>
+                        <Col xs={6} md={3}></Col>
                     </Row>
                 </Grid>
             </div>
