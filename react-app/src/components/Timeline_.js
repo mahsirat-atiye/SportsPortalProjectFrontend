@@ -5,50 +5,14 @@ import {Timeline, TimelineItem} from 'vertical-timeline-component-for-react';
 class Timeline_ extends Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            events : [
-                {
-                    id:1,
-                    type_: "Goal",
-                    time:5,
-                    discription:"Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla\n" +
-                        "                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna\n" +
-                        "                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure\n" +
-                        "                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem\n" +
-                        "                        est.",
 
-                },
-                {
-                    id:1,
-                    type_: "Goal",
-                    time:5,
-                    discription:"Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla\n" +
-                        "                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna\n" +
-                        "                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure\n" +
-                        "                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem\n" +
-                        "                        est.",
-
-                },
-                {
-                    id:1,
-                    type_: "Goal",
-                    time:5,
-                    discription:"Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla\n" +
-                        "                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna\n" +
-                        "                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure\n" +
-                        "                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem\n" +
-                        "                        est.",
-
-                },
-            ]
-        }
     }
 
     render() {
         return (
             <Timeline lineColor={'#ddd'}>
                 {
-                    this.state.events.map(e=>
+                    this.props.events.map(e=>
                         <TimelineItem
                             dateText={"Time : " +  e.time +" min"}
                             key="001"

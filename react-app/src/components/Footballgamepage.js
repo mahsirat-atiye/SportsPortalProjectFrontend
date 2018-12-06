@@ -7,6 +7,8 @@ import Comparisontable from "./Comparisontable";
 import Saved_and_main_players_table from "./Saved_and_main_players_table";
 import Togglingnews from "./Togglingnews";
 import Videoplayer from "./Videoplayer";
+import Timeline_ from "./Timeline_";
+import Playercharacteristics from "./Playercharacteristics";
 
 class Footballgamepage extends Component {
 
@@ -118,7 +120,48 @@ class Footballgamepage extends Component {
                     headnews: "heading of news & discription 3"
                 },
 
-            ]
+            ],
+            events : [
+                {
+                    id:1,
+                    type_: "Goal",
+                    time:5,
+                    discription:"Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla\n" +
+                        "                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna\n" +
+                        "                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure\n" +
+                        "                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem\n" +
+                        "                        est.",
+
+                },
+                {
+                    id:1,
+                    type_: "Goal",
+                    time:5,
+                    discription:"Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla\n" +
+                        "                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna\n" +
+                        "                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure\n" +
+                        "                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem\n" +
+                        "                        est.",
+
+                },
+                {
+                    id:1,
+                    type_: "Goal",
+                    time:5,
+                    discription:"Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla\n" +
+                        "                        exercitation. Veniam velit adipisicing anim excepteur nostrud magna\n" +
+                        "                        nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure\n" +
+                        "                        reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem\n" +
+                        "                        est.",
+
+                },
+            ],
+            best_playe:{
+                imageaddresses:{soobasa},
+                name:"سوباسا",
+                familyname:"احمدی",
+                position:"دروازه بان",
+            }
         }
     }
     render() {
@@ -195,6 +238,47 @@ class Footballgamepage extends Component {
                     </Row>
                     <Row>
                         <br/>
+                        <h3>
+                            <b>
+                                <i>
+                                    بازیکن برتر
+                                </i>
+                            </b>
+                        </h3>
+                        <br/>
+                        <hr/>
+                        <br/>
+                    </Row>
+                    <Row>
+                        <Col xs={6} md={4}>
+                            <Playercharacteristics
+                                imageaddresses={this.state.best_playe.imageaddresses}
+                                name={this.state.best_playe.name}
+                                familyname={this.state.best_playe.familyname}
+                                position={this.state.best_playe.position}
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <br/>
+                        <h3>
+                            <b>
+                                <i>
+                                    بازی به روایت خط زمانی!
+                                </i>
+                            </b>
+                        </h3>
+                        <br/>
+                        <hr/>
+                        <br/>
+                    </Row>
+                    <Row>
+                        <Timeline_
+                            events={this.state.events}
+                        />
+                    </Row>
+                    <Row>
+                        <br/>
                         <Togglingnews
                             heading = {"گزارش متنی لحظه به لحظه بازی"}
                             textofnews={this.state.text_of_report}
@@ -221,7 +305,36 @@ class Footballgamepage extends Component {
                                 video={this.state.video}
                             />
                         </Col>
+                        <br/>
+
                     </Row>
+                    <Row>
+                        <br/>
+                        <h3>
+                            <b>
+                                <i>
+                                    اخبار و پیش بینی های پس از بازی
+                                </i>
+                            </b>
+                        </h3>
+                        <br/>
+                        <hr/>
+                        <br/>
+                    </Row>
+                    <Row>
+                        <br/>
+                        <h3>
+                            <b>
+                                <i>
+                                    اخبار داغ پس از این بازی
+                                </i>
+                            </b>
+                        </h3>
+                        <br/>
+                        <hr/>
+                        <br/>
+                    </Row>
+
                 </Grid>
             </div>
 
