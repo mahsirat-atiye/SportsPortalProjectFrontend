@@ -5,6 +5,7 @@ import Grid from "react-bootstrap/es/Grid";
 import Footballstatistics from "./Footballstatistics";
 import Comparisontable from "./Comparisontable";
 import Saved_and_main_players_table from "./Saved_and_main_players_table";
+import Togglingnews from "./Togglingnews";
 
 class Footballgamepage extends Component {
 
@@ -190,6 +191,14 @@ class Footballgamepage extends Component {
                                 </Col>
                             )
                         }
+                    </Row>
+                    <Row>
+                        <br/>
+                        <Togglingnews
+                            heading = {"گزارش متنی لحظه به لحظه بازی"}
+                            textofnews={this.state.text_of_report}
+                        />
+                        <br/>
                     </Row>
                 </Grid>
             </div>
