@@ -14,6 +14,8 @@ class Newspage extends Component {
         super(props, context);
         this.state = {
 
+            comments:[{text:"Very Good"},{text:"Good"}],
+
             title_: "علی دایی کاپ قهرمانی را برد",
             date: "سه شنبه، 14 آذر ماه",
             sources: ["لولو", "خبرگذاری ایسنا"],
@@ -113,6 +115,7 @@ class Newspage extends Component {
                                 imageaddresses={this.state.imageaddresses}
                                 video={this.state.video}
                                 tags={this.state.tags}
+                                comments={this.state.comments}
                             />
                         </Col>
                         <Col md={4}>

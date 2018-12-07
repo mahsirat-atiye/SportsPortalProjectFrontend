@@ -4,6 +4,7 @@ import basket from "./basket.jpg"
 import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Videoplayer from "./Videoplayer";
+import Commentbox from "./Commentbox";
 
 class Newspage_mainpart extends Component {
 
@@ -102,6 +103,35 @@ class Newspage_mainpart extends Component {
                             />
                         </Col>
                         <br/>
+                        <br/> <br/> <br/>
+                        <br/> <br/> <br/>
+                        <br/> <br/> <br/>
+                    </Row>
+
+                        {this.props.comments.map(
+                            c=>
+                                <Row>
+                                    <div style={{
+                                        background: '#ddd',
+                                        padding: '10px',
+                                        borderRadius: '8px',
+                                        boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
+                                        display:'block',
+                                    }}>
+                                        {c.text}
+                                    </div>
+                                    <br/> <br/> <br/> <br/>
+                                    <br/> <br/> <br/>
+
+
+                                </Row>
+                        )}
+
+
+                    <Row>
+                        <br/> <br/> <br/> <br/>
+                        <br/> <br/> <br/>
+                        <Commentbox/>
                     </Row>
 
                 </Grid>
