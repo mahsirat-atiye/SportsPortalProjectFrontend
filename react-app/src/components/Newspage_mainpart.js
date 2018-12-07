@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Carousel, Media, Col, Row, ListGroup, ListGroupItem,Image } from "react-bootstrap";
+import {Carousel, Col, Row,Image } from "react-bootstrap";
 import basket from "./basket.jpg"
 import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
