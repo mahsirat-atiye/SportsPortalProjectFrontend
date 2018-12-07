@@ -5,7 +5,7 @@ import soobasa from "./soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Videoplayer from "./Videoplayer";
 
-class Newspage extends Component {
+class Newspage_mainpart extends Component {
 
 
     constructor(props, context) {
@@ -140,4 +140,4 @@ class Newspage extends Component {
     }
 }
 
-export default Newspage
+export default Newspage_mainpart
