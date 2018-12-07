@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "history": "latest",
     "mdbreact": "^4.8.4",
+    "persian-date": "latest",
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3",
+    "react-router": "latest",
+    "react-router-dom": "latest",
     "react-scripts": "2.1.1",
-    "vertical-timeline-component-for-react": "^1.0.6"
+    "vertical-timeline-component-for-react": "^1.0.6",
+    "video-react": "^0.13.1"
   },
   "scripts": {
     "start": "react-scripts start",

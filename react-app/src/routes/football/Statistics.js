@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Panel,  ListGroupItem} from "react-bootstrap";
 
 
-class Footballstatistics extends Component {
+class Statistics extends Component {
     constructor(props, context) {
         super(props, context);
 
@@ -26,4 +26,4 @@ class Footballstatistics extends Component {
 
 }
 
-export default Footballstatistics
+export default Statistics

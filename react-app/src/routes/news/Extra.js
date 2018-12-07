@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Carousel, Col, Row, Image} from "react-bootstrap";
-import basket from "./basket.jpg"
-import soobasa from "./soobasa.jpg"
+import basket from "../../images/basket.jpg"
+import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 
-class Newspage_not_mainpart extends Component {
+class Extra extends Component {
 
 
     constructor(props, context) {
@@ -115,4 +115,4 @@ class Newspage_not_mainpart extends Component {
     }
 }
 
-export default Newspage_not_mainpart
+export default Extra

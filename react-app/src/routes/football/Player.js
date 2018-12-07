@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstrap";
-import soobasa from "./soobasa.jpg"
+import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Footballstatistics from "./Footballstatistics";
+import Statistics from "./Statistics";
 
 const divStyle = {
     margintop: '400px'
     // border: '5px solid pink'
 };
 
-class Footballplayerpage extends Component {
+class Player extends Component {
 
 
     constructor(props, context) {
@@ -156,7 +156,7 @@ class Footballplayerpage extends Component {
                     <Row>
                         {this.state.statistics.map(s =>
                             <Col xs={6} md={4}>
-                                <Footballstatistics
+                                <Statistics
                                     key={s.id}
                                     id={s.id}
                                     season_name={s.season_name}
@@ -174,4 +174,4 @@ class Footballplayerpage extends Component {
     }
 }
 
-export default Footballplayerpage
+export default Player

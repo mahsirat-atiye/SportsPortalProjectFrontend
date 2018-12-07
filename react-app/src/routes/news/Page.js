@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Carousel, Col, Row, Image} from "react-bootstrap";
-import basket from "./basket.jpg"
-import soobasa from "./soobasa.jpg"
+import basket from "../../images/basket.jpg"
+import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Videoplayer from "./Videoplayer";
-import Newspage_mainpart from "./Newspage_mainpart";
-import Newspage_not_mainpart from "./Newspage_not_mainpart";
+import Videoplayer from "../../components/Videoplayer";
+import Main from "./Main";
+import Extra from "./Extra";
 
-class Newspage extends Component {
+class Page extends Component {
 
 
     constructor(props, context) {
@@ -109,7 +109,7 @@ class Newspage extends Component {
                 <Grid>
                     <Row>
                         <Col md={8}>
-                            <Newspage_mainpart
+                            <Main
                                 sources={this.state.sources}
                                 text_of_news={this.state.text_of_news}
                                 imageaddresses={this.state.imageaddresses}
@@ -119,7 +119,7 @@ class Newspage extends Component {
                             />
                         </Col>
                         <Col md={4}>
-                            <Newspage_not_mainpart
+                            <Extra
                                 related_news={this.state.related_news}
                                 related_players={this.state.related_players}
                                 related_teams = {this.state.related_teams}
@@ -133,4 +133,4 @@ class Newspage extends Component {
     }
 }
 
-export default Newspage
+export default Page

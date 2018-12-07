@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstrap";
-import basket from "./basket.jpg"
+import basket from "../../images/basket.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Footballstatistics from "./Footballstatistics";
+import Statistics from "../football/Statistics";
 import Basketballstatistics from './Basketballstatistics'
 
 const divStyle = {

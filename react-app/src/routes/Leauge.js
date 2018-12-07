@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstrap";
-import soobasa from "./soobasa.jpg"
+import soobasa from "../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 
-class League extends Component {
+class Leauge extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -40,4 +40,4 @@ class League extends Component {
     }
 }
 
-export default League
+export default Leauge

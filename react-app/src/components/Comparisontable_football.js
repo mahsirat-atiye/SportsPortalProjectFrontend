@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import { Table} from "react-bootstrap";
-import soobasa from "./soobasa.jpg";
+import soobasa from "../images/soobasa.jpg";
 
 class Comparisontable_football extends Component {
 

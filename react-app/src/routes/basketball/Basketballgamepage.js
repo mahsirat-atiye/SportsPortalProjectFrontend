@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstrap";
-import basket from "./basket.jpg"
+import basket from "../../images/basket.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Footballstatistics from "./Footballstatistics";
-import Comparisontable_football from "./Comparisontable_football";
-import Saved_and_main_players_table_football from "./Saved_and_main_players_table_football";
-import Togglingnews from "./Togglingnews";
-import Videoplayer from "./Videoplayer";
-import Timeline_ from "./Timeline_";
-import Playercharacteristics from "./Playercharacteristics";
-import Comparisontable_basketball from "./Comparisontable_basketball";
-import Saved_and_main_players_table_basketball from "./Saved_and_main_players_table_basketball";
+import Statistics from "../football/Statistics";
+import Comparisontable_football from "../../components/Comparisontable_football";
+import Saved_and_main_players_table_football from "../../components/Saved_and_main_players_table_football";
+import Togglingnews from "../../components/Togglingnews";
+import Videoplayer from "../../components/Videoplayer";
+import Timeline_ from "../../components/Timeline_";
+import Playercharacteristics from "../../components/Playercharacteristics";
+import Comparisontable_basketball from "../../components/Comparisontable_basketball";
+import Saved_and_main_players_table_basketball from "../../components/Saved_and_main_players_table_basketball";
 
 class Basketballgamepage extends Component {
 

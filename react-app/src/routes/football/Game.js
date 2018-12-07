@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstrap";
-import soobasa from "./soobasa.jpg"
+import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Footballstatistics from "./Footballstatistics";
-import Comparisontable_football from "./Comparisontable_football";
-import Saved_and_main_players_table_football from "./Saved_and_main_players_table_football";
-import Togglingnews from "./Togglingnews";
-import Videoplayer from "./Videoplayer";
-import Timeline_ from "./Timeline_";
-import Playercharacteristics from "./Playercharacteristics";
+import Statistics from "./Statistics";
+import Comparisontable_football from "../../components/Comparisontable_football";
+import Saved_and_main_players_table_football from "../../components/Saved_and_main_players_table_football";
+import Togglingnews from "../../components/Togglingnews";
+import Videoplayer from "../../components/Videoplayer";
+import Timeline_ from "../../components/Timeline_";
+import Playercharacteristics from "../../components/Playercharacteristics";
 
-class Footballgamepage extends Component {
+class Game extends Component {
 
     constructor(props, context) {
         super(props, context);
@@ -388,4 +388,4 @@ class Footballgamepage extends Component {
 
         );
     }
-}export default Footballgamepage
+}export default Game

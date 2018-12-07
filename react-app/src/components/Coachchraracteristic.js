@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Thumbnail, Button, Col,ListGroupItem} from "react-bootstrap";
-import soobasa from "./soobasa.jpg"
+import soobasa from "../images/soobasa.jpg"
 import ListGroup from "react-bootstrap/es/ListGroup";
 
 class Coachchraracteristic extends Component {
