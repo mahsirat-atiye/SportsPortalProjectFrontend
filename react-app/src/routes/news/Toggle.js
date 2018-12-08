@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import {Panel} from "react-bootstrap";
 
-class Togglingnews extends Component{
-
-
-    constructor(props , context){
-        super(props , context);
-
-
-    }
-
+class Toggle extends Component{
     render(){
         return(
             <Panel eventKey="1">
@@ -23,4 +15,5 @@ class Togglingnews extends Component{
         )
     }
 }
-export default Togglingnews
+
+export default Toggle;

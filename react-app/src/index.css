@@ -27,8 +27,8 @@ body {
 }
 
 .Header {
-    background: #209CEE;
-    padding: 10px;
+    /*background: #209CEE;*/
+    /*padding: 10px;*/
 }
 
 .date {
@@ -48,3 +48,5 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+

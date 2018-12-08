@@ -3,7 +3,7 @@ import {Carousel, Col, Row,Image } from "react-bootstrap";
 import basket from "../../images/basket.jpg"
 import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Videoplayer from "../../components/Videoplayer";
+import Videoplayer from "../tools/VideoPlayer";
 import Commentbox from "../../components/Commentbox";
 
 class Main extends Component {
@@ -16,7 +16,6 @@ class Main extends Component {
                     <Row>
                         <Col xs={6} md={6}>
                             <Image src={soobasa} rounded />
-                            {/*todo src={this.state.imageaddresses[0}*/}
                         </Col>
                     </Row>
                     <Row>

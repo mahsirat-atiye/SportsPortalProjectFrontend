@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstrap";
+import {Carousel, Col} from "react-bootstrap";
 import soobasa from "../images/soobasa.jpg"
-import Grid from "react-bootstrap/es/Grid";
 
 class Leauge extends Component {
 

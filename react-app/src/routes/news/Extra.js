@@ -1,19 +1,9 @@
 import React, {Component} from 'react';
-import {Carousel, Col, Row, Image} from "react-bootstrap";
+import {Carousel, Col, Row} from "react-bootstrap";
 import basket from "../../images/basket.jpg"
-import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 
 class Extra extends Component {
-
-
-    constructor(props, context) {
-        super(props, context);
-
-
-
-    }
-
     render() {
         return (
             <div>
@@ -28,7 +18,7 @@ class Extra extends Component {
                         <br/>
                     </Row>
                     <Row>
-                        <Col  md={3}>
+                        <Col md={3}>
                             <Carousel>
                                 {this.props.related_news.map(img => <Carousel.Item>
                                         <img width={300} height={300} alt="900x500" src={basket}/>
@@ -53,7 +43,7 @@ class Extra extends Component {
                         <br/>
                     </Row>
                     <Row>
-                        <Col  md={3}>
+                        <Col md={3}>
                             <Carousel>
                                 {this.props.latest_news.map(img => <Carousel.Item>
                                         <img width={300} height={300} alt="900x500" src={basket}/>

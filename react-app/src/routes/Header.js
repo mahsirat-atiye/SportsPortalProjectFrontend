@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
 import persianDate from "persian-date";
-import News from "./news/News";
-import {Redirect} from "react-router-dom";
-import Home from "./Home";
+import {Image, MenuItem, Nav, Navbar, NavDropdown, NavItem} from "react-bootstrap";
 
-export default class Header extends Component {
+
+class Header extends Component {
     constructor(props) {
         super(props);
         persianDate.toLocale('fa');
@@ -23,12 +21,6 @@ export default class Header extends Component {
         });
     }
 
-    imageClick() {
-        return (
-            <Redirect to='/'/>
-        )
-    }
-
     setMouseCursorPointer() {
         document.body.style.cursor = 'pointer';
     }
@@ -39,18 +31,51 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div className="Header">
-                <ul className="menu-ul">
-                    <li><img className="logo" onClick={this.imageClick} onMouseEnter={this.setMouseCursorPointer} onMouseLeave={this.setMouseCursorDefault} src={require('../images/NJ.png')}/></li>
-                    <li><Link to="/">صفحه اصلی</Link></li>
-                    <li><Link to="/league">جداول لیگ‌ها</Link></li>
-                    <li><Link to="/news">اخبار</Link></li>
-                    <li><Link to="/about">درباره ما</Link></li>
-                    <li><Link to="/contact">تماس با ما</Link></li>
-                    <li className="date">{this.state.date.format('dddd DD MMMM YYYY ساعت hh:mm:ss')}</li>
-                </ul>
-
+            <div className="Header" dir="rtl">
+                <Navbar inverse expand="md" collapseOnSelect fluid>
+                    <Nav pullRight>
+                        <Navbar.Header>
+                            <Navbar.Brand>
+                                <a href="/">
+                                    <Image className="logo" onClick={this.imageClick}
+                                           onMouseEnter={this.setMouseCursorPointer}
+                                           onMouseLeave={this.setMouseCursorDefault}
+                                           src={require('../images/NJ.png')}
+                                           alt="text"/>
+                                </a>
+                            </Navbar.Brand>
+                            <Navbar.Toggle/>
+                        </Navbar.Header>
+                    </Nav>
+                    <Navbar.Collapse>
+                        <Nav pullRight>
+                            <NavDropdown eventKey={4} title="اخبار" id="basic-nav-dropdown">
+                                <MenuItem style={{textAlign: "right"}} eventKey={4.1}>اخبار فوتبال</MenuItem>
+                                <MenuItem style={{textAlign: "right"}} eventKey={4.2}>اخبار بسکتبال</MenuItem>
+                                <MenuItem divider/>
+                                <MenuItem style={{textAlign: "right"}} eventKey={4.3}>آرشیو</MenuItem>
+                            </NavDropdown>
+                            <NavDropdown eventKey={3} title="جداول لیگ‌ها" id="basic-nav-dropdown">
+                                <MenuItem style={{textAlign: "right"}} eventKey={3.1}>لیگ برتر فوتبال ۱۳۹۷</MenuItem>
+                                <MenuItem style={{textAlign: "right"}} eventKey={3.2}>لیگ برتر بسکتبال ۱۳۹۷</MenuItem>
+                                <MenuItem divider/>
+                                <MenuItem style={{textAlign: "right"}} eventKey={3.3}>لیگ‌های قدیمی فوتبال</MenuItem>
+                                <MenuItem style={{textAlign: "right"}} eventKey={3.4}>لیگ‌های قدیمی بسکتبال</MenuItem>
+                            </NavDropdown>
+                            <NavItem eventKey={1} href="/">
+                                صفحه اصلی
+                            </NavItem>
+                        </Nav>
+                        <Nav pullLeft>
+                            <Navbar.Text>
+                                {this.state.date.format('dddd DD MMMM YYYY ساعت HH:mm:ss')}
+                            </Navbar.Text>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
             </div>
         )
     }
 }
+
+export default Header;

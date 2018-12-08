@@ -1,115 +1,123 @@
 import React, {Component} from 'react';
-import {Carousel, Col, Row,Image,Thumbnail,Button } from "react-bootstrap";
-import basket from "../images/basket.jpg"
+import {Row, Thumbnail, Button} from "react-bootstrap";
 import soobasa from "../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 
-class main_page extends Component{
-
-
+export default class Home extends Component {
     constructor(props, context) {
         super(props, context);
-        this.state={
-            latest_news_football:[
+        this.state = {
+            latest_news_football: [
                 {
-                    news_id:2,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
+                    news_id: 2,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 1
                 },
                 {
-                    news_id:12,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
-                },
-
-            ],
-            latest_news_basketball:[
-                {
-                    news_id:2,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
-                },
-                {
-                    news_id:12,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
+                    news_id: 12,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 2
                 },
 
             ],
-            favorite_news_football:[
+            latest_news_basketball: [
                 {
-                    news_id:2,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
+                    news_id: 2,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 3
                 },
                 {
-                    news_id:12,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
-                },
-
-            ],
-            favorite_news_basketball:[
-                {
-                    news_id:2,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
-                },
-                {
-                    news_id:12,
-                    news_title:"استقلال برد.",
-                    news_image_address:{soobasa},
+                    news_id: 12,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 4
                 },
 
             ],
-            all_games:[
+            favorite_news_football: [
                 {
-                    imageaddresses:[{soobasa}],
+                    news_id: 2,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 5
+                },
+                {
+                    news_id: 12,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 6
+                },
+
+            ],
+            favorite_news_basketball: [
+                {
+                    news_id: 2,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 7
+                },
+                {
+                    news_id: 12,
+                    news_title: "استقلال برد.",
+                    news_image_address: {soobasa},
+                    key: 8
+                },
+
+            ],
+            all_games: [
+                {
+                    imageaddresses: [{soobasa}],
                     time: "1976 Dec 17 , 13:30  ",
-                    teams:[
-                        {name:"استقلال"},
-                        {name:"پرسپولیس"}
-                    ]
+                    teams: [
+                        {name: "استقلال"},
+                        {name: "پرسپولیس"}
+                    ],
+                    key: 9
                 },
                 {
                     time: "1976 Dec 17 , 13:30  ",
-                    teams:[
-                        {name:"استقلال"},
-                        {name:"پرسپولیس"}
-                    ]
+                    teams: [
+                        {name: "استقلال"},
+                        {name: "پرسپولیس"}
+                    ],
+                    key: 10
                 }
             ],
 
-            favorite_games:[
+            favorite_games: [
                 {
-                    imageaddresses:[{soobasa}],
+                    imageaddresses: [{soobasa}],
                     time: "1976 Dec 17 , 13:30  ",
-                    teams:[
-                        {name:"استقلال"},
-                        {name:"پرسپولیس"}
-                    ]
+                    teams: [
+                        {name: "استقلال"},
+                        {name: "پرسپولیس"}
+                    ],
+                    key: 11
                 },
                 {
                     time: "1976 Dec 17 , 13:30  ",
-                    teams:[
-                        {name:"استقلال"},
-                        {name:"پرسپولیس"}
-                    ]
+                    teams: [
+                        {name: "استقلال"},
+                        {name: "پرسپولیس"}
+                    ],
+                    key: 12
                 }
             ]
 
 
-
         }
     }
+
     render() {
         return (
             <div>
                 <Grid>
                     <Row>
                         <br/>
-
-                        <h3>همه ی بازی ها </h3>
+                        <h3>بازی‌ها </h3>
                         <hr/>
                         <br/>
                         <br/>
@@ -117,9 +125,9 @@ class main_page extends Component{
                     <Row>
                         {
                             this.state.all_games.map(g =>
-                                <Thumbnail src={soobasa} alt="242x200">
+                                <Thumbnail src={soobasa} alt="242x200" key={g.key}>
                                     {/*todo img addressing*/}
-                                    <h3>{g.teams[0].name +" و " +g.teams[1].name}</h3>
+                                    <h3>{g.teams[0].name + " و " + g.teams[1].name}</h3>
                                     <p>{g.time}</p>
 
                                     <Button bsStyle="danger">Like</Button>
@@ -133,9 +141,9 @@ class main_page extends Component{
                     <Row>
                         {
                             this.state.favorite_games.map(g =>
-                                <Thumbnail src={soobasa} alt="242x200">
+                                <Thumbnail src={soobasa} alt="242x200" key={g.key}>
                                     {/*todo img addressing*/}
-                                    <h3>{g.teams[0].name +" و " +g.teams[1].name}</h3>
+                                    <h3>{g.teams[0].name + " و " + g.teams[1].name}</h3>
                                     <p>{g.time}</p>
                                     <p>
                                         <Button bsStyle="success">More Info</Button>
@@ -146,9 +154,6 @@ class main_page extends Component{
                     </Row>
                 </Grid>
             </div>
-
         );
     }
 }
-
-export default main_page;

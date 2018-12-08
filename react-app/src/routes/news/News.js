@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Carousel, Col, Row, Image} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import basket from "../../images/basket.jpg"
 import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Videoplayer from "../../components/Videoplayer";
 import Main from "./Main";
 import Extra from "./Extra";
 

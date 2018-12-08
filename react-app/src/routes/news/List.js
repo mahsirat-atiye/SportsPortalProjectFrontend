@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Togglingnews from "./Togglingnews";
+import Togglingnews from "./Toggle";
 import {PanelGroup, ButtonGroup, Button} from "react-bootstrap";
 
-class Listoftogglingnews extends Component {
+class List extends Component {
 
 
     constructor(props, context) {
@@ -64,5 +64,4 @@ class Listoftogglingnews extends Component {
 
 }
 
-export default Listoftogglingnews
-
+export default List;

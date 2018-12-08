@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {Carousel, Media, Col, Row, ListGroup, ListGroupItem, DropdownButton, MenuItem, Button} from "react-bootstrap";
+import {Carousel, Media, Col, Row, DropdownButton, MenuItem, Button} from "react-bootstrap";
 import soobasa from "../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
-import Statistics from "../routes/football/Statistics";
 import Gamecharacteristics from "./Gamecharacteristics";
 import Coachchraracteristic from "./Coachchraracteristic";
 import Playercharacteristics from "./Playercharacteristics"

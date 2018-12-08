@@ -1,14 +1,8 @@
 import React, {Component} from 'react';
 
-import { Player } from 'video-react';
+import {Player} from 'video-react';
 
-class Videoplayer extends Component {
-
-    constructor(props, context) {
-        super(props, context);
-
-    }
-
+class VideoPlayer extends Component {
     render() {
         return (
             <div>
@@ -22,4 +16,5 @@ class Videoplayer extends Component {
         );
     }
 }
-export default Videoplayer
+
+export default VideoPlayer;

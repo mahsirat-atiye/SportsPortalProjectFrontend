@@ -5,11 +5,6 @@ import soobasa from "../images/soobasa.jpg";
 
 class Saved_and_main_players_table_basketball extends Component {
 
-    constructor(props, context) {
-        super(props, context);
-
-    }
-
     render() {
         return (
             <Table responsive striped bordered condensed hover>

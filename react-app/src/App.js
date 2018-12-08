@@ -10,10 +10,20 @@ import News from "./routes/news/News.js";
 
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.imgUrl = "images/background.png";
+    }
+
     render() {
         return (
             <Router history={history}>
-                <div>
+                <div style={{backgroundImage: "url('" + require('./images/background.png') + "')",
+                    backgroundRepeat: 'repeat-x repeat-y',
+                    backgroundPosition: 'center',
+                    minHeight: "100vh"
+                    }}>
+
                     <Header/>
                     <Route exact path="/" component={Home}/>
                     <Route path="/league" component={League}/>
