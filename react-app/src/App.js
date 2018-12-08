@@ -6,6 +6,7 @@ import history from './history.js';
 import Header from './routes/Header.js';
 import Contact from "./routes/Contact.js";
 import League from "./routes/Leauge.js";
+import News from "./routes/news/News.js";
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
                     <Header/>
                     <Route exact path="/" component={Home}/>
                     <Route path="/league" component={League}/>
+                    <Route path="/news" component={News}/>
                     <Route path="/about" component={About}/>
                     <Route path="/contact" component={Contact}/>
                 </div>

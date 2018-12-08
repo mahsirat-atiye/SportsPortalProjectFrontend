@@ -32,9 +32,6 @@ class Leauge extends Component {
 
                     </Carousel>;
                 </Col>
-
-
-
             </div>
         )
     }

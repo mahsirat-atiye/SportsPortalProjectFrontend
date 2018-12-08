@@ -104,7 +104,6 @@ class main_page extends Component{
     }
     render() {
         return (
-
             <div>
                 <Grid>
                     <Row>

@@ -7,7 +7,7 @@ import Videoplayer from "../../components/Videoplayer";
 import Main from "./Main";
 import Extra from "./Extra";
 
-class Page extends Component {
+export default class News extends Component {
 
 
     constructor(props, context) {
@@ -132,5 +132,3 @@ class Page extends Component {
         );
     }
 }
-
-export default Page
