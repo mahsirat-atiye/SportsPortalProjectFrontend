@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import {Table} from "react-bootstrap";
-import soobasa from "../images/soobasa.jpg";
 
 class Saved_and_main_players_table_football extends Component {
 
