@@ -49,14 +49,17 @@ class Header extends Component {
                     </Nav>
                     <Navbar.Collapse>
                         <Nav pullRight>
+                            <NavItem eventKey={5} href="/test">
+                                تست
+                            </NavItem>
                             <NavDropdown eventKey={4} title="اخبار" id="basic-nav-dropdown">
-                                <MenuItem style={{textAlign: "right"}} eventKey={4.1}>اخبار فوتبال</MenuItem>
+                                <MenuItem href="/news" style={{textAlign: "right"}} eventKey={4.1}>اخبار فوتبال</MenuItem>
                                 <MenuItem style={{textAlign: "right"}} eventKey={4.2}>اخبار بسکتبال</MenuItem>
                                 <MenuItem divider/>
                                 <MenuItem style={{textAlign: "right"}} eventKey={4.3}>آرشیو</MenuItem>
                             </NavDropdown>
                             <NavDropdown eventKey={3} title="جداول لیگ‌ها" id="basic-nav-dropdown">
-                                <MenuItem style={{textAlign: "right"}} eventKey={3.1}>لیگ برتر فوتبال ۱۳۹۷</MenuItem>
+                                <MenuItem href="/league" style={{textAlign: "right"}} eventKey={3.1}>لیگ برتر فوتبال ۱۳۹۷</MenuItem>
                                 <MenuItem style={{textAlign: "right"}} eventKey={3.2}>لیگ برتر بسکتبال ۱۳۹۷</MenuItem>
                                 <MenuItem divider/>
                                 <MenuItem style={{textAlign: "right"}} eventKey={3.3}>لیگ‌های قدیمی فوتبال</MenuItem>

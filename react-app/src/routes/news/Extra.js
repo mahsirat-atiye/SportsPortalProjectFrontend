@@ -7,99 +7,59 @@ class Extra extends Component {
     render() {
         return (
             <div>
-                <Grid>
-                    <Row>
-                        <br/>
-                        <h3>
-                            اخبار مرتبط
-                        </h3>
+                <h3>
+                    آخرین اخبار
+                </h3>
+                <Carousel>
+                    {this.props.related_news.map(img => <Carousel.Item>
+                            <img width={300} height={300} alt="900x500" src={basket}/>
+                            {/*todo src of ...*/}
 
-                        <hr/>
-                        <br/>
-                    </Row>
-                    <Row>
-                        <Col md={3}>
-                            <Carousel>
-                                {this.props.related_news.map(img => <Carousel.Item>
-                                        <img width={300} height={300} alt="900x500" src={basket}/>
-                                        {/*todo src of ...*/}
-
-                                        <Carousel.Caption>
-                                            <h3>{img.title_}</h3>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                )}
+                            <Carousel.Caption>
+                                <h3>{img.title_}</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    )}
 
 
-                            </Carousel>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <br/>
-                        <h3>
-                            جدیدترین اخبار
-                        </h3>
-                        <hr/>
-                        <br/>
-                    </Row>
-                    <Row>
-                        <Col md={3}>
-                            <Carousel>
-                                {this.props.latest_news.map(img => <Carousel.Item>
-                                        <img width={300} height={300} alt="900x500" src={basket}/>
-                                        {/*todo src of ...*/}
+                </Carousel>
+                <h3>
+                    مورد علاقه‌ها
+                </h3>
+                <Carousel>
+                    {this.props.latest_news.map(img => <Carousel.Item>
+                            <img width={300} height={300} alt="900x500" src={basket}/>
+                            {/*todo src of ...*/}
 
-                                        <Carousel.Caption>
-                                            <h3>{img.title_}</h3>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                )}
+                            <Carousel.Caption>
+                                <h3>{img.title_}</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    )}
 
 
-                            </Carousel>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <br/>
-                        <h3>
-                            تیم های مرتبط با اخبار
-                        </h3>
-
-                        <hr/>
-                        <br/>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <ul>
-                                {this.props.related_teams.map(t =>
-                                        <li> {t.team_name}</li>
-                                    // href needed?
-                                )
-                                }
-                            </ul>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <br/>
-                        <h3>
-                            بازیکنان مرتبط با اخبار
-                        </h3>
-
-                        <hr/>
-                        <br/>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <ul>
-                                {this.props.related_players.map(t =>
-                                        <li> {t.player_name + " " + t.player_familyname}</li>
-                                    // href needed?
-                                )
-                                }
-                            </ul>
-                        </Col>
-                    </Row>
-                </Grid>
+                </Carousel>
+                <h3>
+                    تیم های مرتبط با اخبار
+                </h3>
+                <ul>
+                    {this.props.related_teams.map(t =>
+                            <li> {t.team_name}</li>
+                        // href needed?
+                    )
+                    }
+                </ul>
+                <br/>
+                <h3>
+                    بازیکنان مرتبط با اخبار
+                </h3>
+                <ul>
+                    {this.props.related_players.map(t =>
+                            <li> {t.player_name + " " + t.player_familyname}</li>
+                        // href needed?
+                    )
+                    }
+                </ul>
             </div>
         );
     }

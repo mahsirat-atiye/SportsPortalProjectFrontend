@@ -6,7 +6,9 @@ import history from './history.js';
 import Header from './routes/Header.js';
 import Contact from "./routes/Contact.js";
 import League from "./routes/Leauge.js";
-import News from "./routes/news/News.js";
+import News from "./routes/news/Page.js";
+
+import test from "./routes/test.js";
 
 
 class App extends Component {
@@ -30,6 +32,7 @@ class App extends Component {
                     <Route path="/news" component={News}/>
                     <Route path="/about" component={About}/>
                     <Route path="/contact" component={Contact}/>
+                    <Route path="/test" component={test}/>
                 </div>
             </Router>
 

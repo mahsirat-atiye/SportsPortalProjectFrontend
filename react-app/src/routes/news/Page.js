@@ -6,26 +6,17 @@ import Grid from "react-bootstrap/es/Grid";
 import Main from "./Main";
 import Extra from "./Extra";
 
-export default class News extends Component {
-
-
+export default class Page extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
 
-            comments:[{text:"Very Good"},{text:"Good"}],
+            comments: [{text: "Very Good"}, {text: "Good"}],
 
             title_: "علی دایی کاپ قهرمانی را برد",
             date: "سه شنبه، 14 آذر ماه",
             sources: ["لولو", "خبرگذاری ایسنا"],
-            text_of_news: "لولولولولولولولولولولو لولولولولولولولولولولو لولولولولو" +
-                "لولولولولولولولولولولو لولولولولو لولولولولولولولو" +
-                "لولولولولولولولولولولولولولولولولولول ولولولولولول" +
-                "ولولولولولولولولولولولولولولولولولولولولولو لولولول" +
-                "ولولولولولولولولول  ولولولولولولولولولولولولولولول" +
-                "ولولولولولولولولولولولول ولولولولولولولولولولولو" +
-                "لولولولولولولولول ولولولولولولولولولولول ولولولولولولو" +
-                "لولولولولولولولولولولولو لولولولولولولولو لولولولولولولولولو",
+            text_of_news: "سوباسا",
             imageaddresses: [{soobasa}, {basket}, {basket}, {basket}],
             video: "https://media.w3.org/2010/05/sintel/trailer_hd.mp4",
             tags: ["tag1", "tag2", "tag3"],
@@ -117,12 +108,12 @@ export default class News extends Component {
                                 comments={this.state.comments}
                             />
                         </Col>
-                        <Col md={4}>
+                        <Col md={2}>
                             <Extra
                                 related_news={this.state.related_news}
                                 related_players={this.state.related_players}
-                                related_teams = {this.state.related_teams}
-                                latest_news = {this.state.latest_news}
+                                related_teams={this.state.related_teams}
+                                latest_news={this.state.latest_news}
                             />
                         </Col>
                     </Row>

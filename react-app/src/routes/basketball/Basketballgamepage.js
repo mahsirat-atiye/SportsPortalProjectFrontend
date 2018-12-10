@@ -5,7 +5,7 @@ import Grid from "react-bootstrap/es/Grid";
 import Statistics from "../football/Statistics";
 import Comparisontable_football from "../../components/Comparisontable_football";
 import Saved_and_main_players_table_football from "../../components/Saved_and_main_players_table_football";
-import Togglingnews from "../news/Toggle";
+import sss from "../news/Toggle";
 import Videoplayer from "../tools/VideoPlayer";
 import Timeline_ from "../../components/Timeline_";
 import Playercharacteristics from "../../components/Playercharacteristics";
@@ -413,7 +413,7 @@ class Basketballgamepage extends Component {
                         </Row>
                         <Row>
                             <br/>
-                            <Togglingnews
+                            <sss
                                 heading={"گزارش متنی لحظه به لحظه بازی"}
                                 textofnews={this.state.text_of_report}
                             />
