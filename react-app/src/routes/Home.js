@@ -4,65 +4,15 @@ import soobasa from "../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import {Flex, Box} from 'reflexbox';
 import Toggle from './news/Box.js';
+import ToggleGame from './news/Game.js';
 
 export default class Home extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            latest_news_football: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    key: 1
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    key: 2
-                },
-            ],
-            latest_news_basketball: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    key: 3
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    key: 4
-                },
-
-            ],
-            favorite_news_football: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    key: 5
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    key: 6
-                },
-
-            ],
-            favorite_news_basketball: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    key: 7
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    key: 8
-                },
-
-            ],
             all_games: [
                 {
-                    time: "1397 Azar 17 , 12:30  ",
+                    time: "فوتبال، چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
                         {name: "استقلال"},
                         {name: "پرسپولیس"}
@@ -70,10 +20,10 @@ export default class Home extends Component {
                     key: 9
                 },
                 {
-                    time: "1397 Azar 17 , 13:30  ",
+                    time: "بسکتبال، چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
-                        {name: "تیم ۱"},
-                        {name: "تیم ۲"}
+                        {name: "بسکتبال‌باز"},
+                        {name: "غیورمرد"}
                     ],
                     key: 10
                 }
@@ -81,7 +31,7 @@ export default class Home extends Component {
 
             favorite_games: [
                 {
-                    time: "1397 Azar 17 , 13:30  ",
+                    time: "چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
                         {name: "تیم مورد علاقه ۳"},
                         {name: "تیم ۴"}
@@ -89,10 +39,10 @@ export default class Home extends Component {
                     key: 11
                 },
                 {
-                    time: "1397 Azar 17 , 13:30  ",
+                    time: "چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
                         {name: "تیم ۵"},
-                        {name: "تیم مورد علاقه ۶"}
+                        {name: "تیم ۶"}
                     ],
                     key: 12
                 }
@@ -119,30 +69,25 @@ export default class Home extends Component {
                         <Toggle f={'علی نجیمی'} e={'۱۵ آذر ۱۳۹۷'} a='خبر بسکتبال مورد علاقه' b='به گزارش "ورزش سه"، حساسیت دیدار سپاهان و پرسپولیس سبب شد، کمیته داوران از علیرضا فغانی یکی از بهترین داوران فوتبال جهان برای قضاوت این مسابقه استفاده کند تا احتمال حرف و حدیث ها را پس از این مسابقه حساس به پایین ترین حد ممکن برساند، ولی اشتباه فغانی روی اعلام پنالتی به سود پرسپولیس سبب شد تا انتقادات فراوانی از این داور بین المللی فوتبال کشور انجام شود.' c='basketball' d={true}/>
                     </Box>
                     <Box order={2} p={[1, 2, 3]} w={[1 / 2, 1 / 3, 1 / 4]}>
-                        <h3>بازی‌ها</h3>
+                        <h3>بازی‌های تمام‌شده</h3>
                         {
                             this.state.all_games.map(g =>
-                                <Thumbnail src={soobasa} alt="242x200" key={g.key}>
-                                    {/*todo img addressing*/}
-                                    <h3>{g.teams[0].name + " و " + g.teams[1].name}</h3>
-                                    <p>{g.time}</p>
-
-                                    <Button bsStyle="danger">Like</Button>
-                                    <Button bsStyle="success">More Info</Button>
-
-                                </Thumbnail>
+                                <ToggleGame a={g.time} b={g.teams[0].name + " ۲ - ۳ " + g.teams[1].name}/>
                             )
                         }
+                        <h3>بازی‌های درجریان</h3>
+                        <Row>
+                            {
+                                this.state.all_games.map(g =>
+                                    <ToggleGame a={g.time} b={g.teams[0].name + " ۰ - ۰ " + g.teams[1].name}/>
+                                )
+                            }
+                        </Row>
+                        <h3>بازی‌های آینده</h3>
                         <Row>
                             {
                                 this.state.favorite_games.map(g =>
-                                    <Toggle>
-                                        <h3>{g.teams[0].name + " - " + g.teams[1].name}</h3>
-                                        <p>{g.time}</p>
-                                        <p>
-                                            <Button bsStyle="success">More Info</Button>
-                                        </p>
-                                    </Toggle>
+                                    <ToggleGame a={g.time} b={g.teams[0].name + " - " + g.teams[1].name}/>
                                 )
                             }
                         </Row>

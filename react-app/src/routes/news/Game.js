@@ -17,14 +17,23 @@ class Box extends Component {
         return (
             <div>
                 <Panel bsStyle={color} fluid>
-                    <Panel.Heading>
+                    <Panel.Heading style={{textAlign: 'center'}}>
                         <Panel.Title componentClass="h3">{this.props.a}</Panel.Title>
                     </Panel.Heading>
-                    <Panel.Body>
+                    <Panel.Body style={{textAlign: 'center'}}>
                         {this.props.b}
-                        <Thumbnail src={require("../../images/1.jpg")} responsive/>
+                        <form action="/game_info"><button style={{
+                            background: '#4CAF50',
+                            float: 'left',
+                            color: 'white',
+                            padding: '0px 0px',
+                            margin: '1px 0',
+                            border: 'none',
+                            cursor: 'pointer',
+                            width: '40%',
+                            opacity: '0.9'
+                        }}>اطلاعات بیشتر</button></form>
                     </Panel.Body>
-                    <Panel.Footer>نوشته‌شده توسط {this.props.f} در تایخ {this.props.e}</Panel.Footer>
                 </Panel>
             </div>
         )
