@@ -49,21 +49,18 @@ class Header extends Component {
                     </Nav>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavItem eventKey={9} href="/test">
-                                تست
-                            </NavItem>
-                            <NavItem eventKey={8} href="/game_info_basketball">
-                                مشاهده‌ی نتایج بازی بسکتبال
-                            </NavItem>
-                            <NavItem eventKey={7} href="/game_info_football">
-                                مشاهده‌ی نتایج بازی فوتبال
-                            </NavItem>
-                            <NavItem eventKey={6} href="/player_info_football">
-                                مشاهده‌ی بازیکن فوتبال
-                            </NavItem>
-                            <NavItem eventKey={5} href="/team_info">
-                                مشاهده‌ی تیم
-                            </NavItem>
+                            <NavDropdown eventKey={4} title="نتایج بازی" id="basic-nav-dropdown">
+                                <MenuItem href="/game_info_football" style={{textAlign: "right"}} eventKey={4.1}>مشاهده‌ی نتایج بازی فوتبال</MenuItem>
+                                <MenuItem href="/game_info_basketball" style={{textAlign: "right"}} eventKey={4.3}>مشاهده‌ی نتایج بازی بسکتبال</MenuItem>
+                            </NavDropdown>
+                            <NavDropdown eventKey={4} title="بازیکن" id="basic-nav-dropdown">
+                                <MenuItem href="/player_info_football" style={{textAlign: "right"}} eventKey={4.1}>مشاهده‌ی بازیکن فوتبال</MenuItem>
+                                <MenuItem href="/player_info_basketball" style={{textAlign: "right"}} eventKey={4.3}>مشاهده‌ی بازیکن بسکتبال</MenuItem>
+                            </NavDropdown>
+                            <NavDropdown eventKey={4} title="تیم" id="basic-nav-dropdown">
+                                <MenuItem href="/team_info" style={{textAlign: "right"}} eventKey={4.1}>مشاهده تیم</MenuItem>
+                                <MenuItem href="/team_info_vip" style={{textAlign: "right"}} eventKey={4.3}>وی‌آی‌پی</MenuItem>
+                            </NavDropdown>
                             <NavDropdown eventKey={4} title="اخبار" id="basic-nav-dropdown">
                                 <MenuItem href="/news" style={{textAlign: "right"}} eventKey={4.1}>اخبار فوتبال</MenuItem>
                                 <MenuItem style={{textAlign: "right"}} eventKey={4.2}>اخبار بسکتبال</MenuItem>
