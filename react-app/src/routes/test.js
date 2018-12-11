@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Box from './news/Box2';
+import Box from './table/GridBagLayout';
 import Demo2 from './tools/panel_group.js';
-import Demo from './table/retable.js';
+import Demo from './table/table_league.js';
 
 export default class test extends Component {
     render() {

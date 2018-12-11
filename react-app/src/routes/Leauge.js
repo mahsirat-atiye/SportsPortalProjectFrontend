@@ -1,39 +1,62 @@
 import React, {Component} from 'react';
-import {Carousel, Col} from "react-bootstrap";
-import soobasa from "../images/soobasa.jpg"
+import Tablee from './table/table_league.js';
+import {Panel, PanelGroup} from "react-bootstrap";
+import SearchBox from '../components/Searchbox.js';
 
-class Leauge extends Component {
-
+export default class Leauge extends Component {
     constructor(props, context) {
         super(props, context);
 
+        this.handleSelect = this.handleSelect.bind(this);
+
         this.state = {
-            imageaddresses: [{soobasa}, {soobasa}, {soobasa}],
-            players: []
-        }
+            activeKey: '1'
+        };
     }
 
+    handleSelect(activeKey) {
+        this.setState({activeKey});
+    }
 
     render() {
         return (
             <div>
-                <Col xs={12} md={8}>
-                    <Carousel>
-                        {this.state.imageaddresses.map(img => <Carousel.Item>
-                                <img width={500} height={500} alt="900x500" src={img}/>
-                                <Carousel.Caption>
-                                    <h3>Image of ligue</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        )}
+                <PanelGroup
+                    accordion
+                    id="accordion-controlled-example"
+                    activeKey={this.state.activeKey}
+                    onSelect={this.handleSelect}
+                >
+                    <Panel eventKey="1">
+                        <Panel.Heading>
+                            <Panel.Title toggle>لیگ جدید</Panel.Title>
+                        </Panel.Heading>
+                        <Panel.Body collapsible>
+                            <Tablee/>
+                        </Panel.Body>
+                    </Panel>
+                    <Panel eventKey="2">
+                        <Panel.Heading>
+                            <Panel.Title toggle>لیگ قدیمی</Panel.Title>
+                        </Panel.Heading>
+                        <Panel.Body collapsible>
+                            <Tablee/>
+                        </Panel.Body>
+                    </Panel>
+                    <SearchBox/>
+                    <Panel eventKey="0">
+                        <Panel.Heading>
+                            <Panel.Title toggle>جستجو</Panel.Title>
+                        </Panel.Heading>
+                        <Panel.Body collapsible>
+                            <Tablee/>
+                        </Panel.Body>
+                    </Panel>
 
-
-                    </Carousel>;
-                </Col>
+                </PanelGroup>
             </div>
-        )
+
+
+        );
     }
 }
-
-export default Leauge

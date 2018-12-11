@@ -5,8 +5,10 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^3.0.1",
+    "classnames": "latest",
     "history": "latest",
     "immutability-helper": "^2.8.1",
+    "material-ui": "^0.20.2",
     "mdbreact": "^4.8.4",
     "persian-date": "latest",
     "prop-types": "latest",
@@ -24,8 +26,7 @@
     "reflexbox": "^3.0.1",
     "simple-flexbox": "^1.2.0",
     "vertical-timeline-component-for-react": "^1.0.6",
-    "video-react": "^0.13.1",
-    "classnames": "latest"
+    "video-react": "^0.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
