@@ -4,6 +4,7 @@ import Home from './routes/Home.js';
 import About from './routes/About.js';
 import history from './history.js';
 import Header from './routes/Header.js';
+import Team from './routes/Team.js';
 import Contact from "./routes/Contact.js";
 import League from "./routes/Leauge.js";
 import League_x from "./routes/League_x.js";
@@ -27,6 +28,7 @@ class App extends Component {
                     <Route path="/league" component={League}/>
                     <Route path="/league_x" component={League_x}/>
                     <Route path="/game_info" component={League_x}/>
+                    <Route path="/team_info" component={Team}/>
                     <Route path="/news" component={News}/>
                     <Route path="/about" component={About}/>
                     <Route path="/contact" component={Contact}/>
