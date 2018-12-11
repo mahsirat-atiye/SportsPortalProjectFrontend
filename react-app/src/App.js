@@ -22,10 +22,14 @@ class App extends Component {
     render() {
         return (
             <Router history={history}>
-                <div style={{backgroundImage: "url('" + require('./images/background.png') + "')",
-                    backgroundRepeat: 'repeat-x repeat-y',
-                    backgroundPosition: 'center',
-                    minHeight: "100vh"
+                <div
+                    style={{
+                    // backgroundImage: "url('" + require('./images/background.png') + "')",
+                    // backgroundRepeat: 'repeat-x repeat-y',
+                    // backgroundPosition: 'center',
+                    // minHeight: "100vh"
+                        background: '#cce6ff',
+                        fontFamily: "B Nazanin"
                     }}>
 
                     <Header/>

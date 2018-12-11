@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Panel, Thumbnail} from "react-bootstrap";
+import {Image, Panel, Thumbnail,Button} from "react-bootstrap";
 
 class Box extends Component {
     render() {
@@ -22,17 +22,21 @@ class Box extends Component {
                     </Panel.Heading>
                     <Panel.Body style={{textAlign: 'center'}}>
                         {this.props.b}
-                        <form action="/game_info"><button style={{
-                            background: '#4CAF50',
-                            float: 'left',
-                            color: 'white',
-                            padding: '0px 0px',
-                            margin: '1px 0',
-                            border: 'none',
-                            cursor: 'pointer',
-                            width: '40%',
-                            opacity: '0.9'
-                        }}>اطلاعات بیشتر</button></form>
+
+
+
+                        <form action="/game_info"><Button className={" btn-large btn-success"}
+                            style={{
+                            // background: '#4CAF50',
+                            // float: 'left',
+                            // color: 'white',
+                            // padding: '0px 0px',
+                            // margin: '1px 0',
+                            // border: 'none',
+                            // cursor: 'pointer',
+                            // width: '40%',
+                            // opacity: '0.9'
+                        }}>اطلاعات بیشتر</Button></form>
                     </Panel.Body>
                 </Panel>
             </div>

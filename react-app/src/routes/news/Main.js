@@ -5,6 +5,8 @@ import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Videoplayer from "../tools/VideoPlayer";
 import Commentbox from "../../components/Commentbox";
+import Extra from "./Extra";
+import {Box} from "reflexbox";
 
 class Main extends Component {
 
@@ -14,12 +16,12 @@ class Main extends Component {
             <div>
                 <Grid>
                     <Row>
-                        <Col xs={6} md={6}>
-                            <Image src={soobasa} rounded />
+                        <Col xs={6} md={8}>
+                            <Image src={soobasa} width={400} height={400} rounded />
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={6} md={6}>
+                        <Col xs={6} md={8}>
                         <p>
                             {this.props.text_of_news}
                         </p>
@@ -27,7 +29,7 @@ class Main extends Component {
 
                     </Row>
                     <Row>
-                        <Col xs={6} md={6}>
+                        <Col >
                             <br/>
                            <h3>منابع</h3>
                             <br/>
@@ -43,7 +45,7 @@ class Main extends Component {
                         </ul>
                     </Row>
                     <Row>
-                        <Col xs={6} md={6}>
+                        <Col >
                             <br/>
                             <h3>تگ های مرتبط</h3>
                             <br/>
@@ -55,14 +57,14 @@ class Main extends Component {
 
                             {this.props.tags.map(s =>
                                 <label style={{display:'inline_block',
-                                            color:'red'
+                                            color:'orange'
                                 }}>&nbsp; &nbsp; { s } &nbsp; &nbsp;</label>
                             )}
 
                     </Row>
 
                     <Row>
-                        <Col xs={6} md={6}>
+                        <Col >
                             <br/>
                             <h3>تصاویر و فیلم های مرتبط</h3>
                             <br/>
@@ -72,7 +74,7 @@ class Main extends Component {
                     </Row>
 
                     <Row>
-                        <Col xs={6} md={6}>
+                        <Col xs={8} md={10} >
                             <Carousel>
                                 {this.props.imageaddresses.map(img => <Carousel.Item>
                                         <img width={500} height={500} alt="900x500" src={basket}/>
@@ -90,7 +92,7 @@ class Main extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={6} md={6}>
+                        <Col xs={8} md={10} >
                             <br/>
                             <br/>
                             <Videoplayer
@@ -102,10 +104,19 @@ class Main extends Component {
                         <br/> <br/> <br/>
                         <br/> <br/> <br/>
                     </Row>
+                    <Row>
+                        <Col xs={8} md={10} >
+                            <br/>
+                            <br/> <br/> <br/>
+                            <br/> <br/> <br/>
+                            <br/> <br/> <br/>
+                        </Col>
+                    </Row>
 
                         {this.props.comments.map(
                             c=>
                                 <Row>
+                                    <Col xs={6} md={6}>
                                     <div style={{
                                         background: '#ddd',
                                         padding: '10px',
@@ -115,18 +126,43 @@ class Main extends Component {
                                     }}>
                                         {c.text}
                                     </div>
-                                    <br/> <br/> <br/> <br/>
-                                    <br/> <br/> <br/>
+                                    <br/>
 
-
+                                    </Col>
                                 </Row>
                         )}
 
 
                     <Row>
+                        <Col xs={6} md={6}>
                         <br/> <br/> <br/> <br/>
                         <br/> <br/> <br/>
                         <Commentbox/>
+                        </Col>
+                        <Col>
+                            <h3>
+                                تیم های مرتبط با اخبار
+                            </h3>
+                            <ul>
+                                {this.props.related_teams.map(t =>
+                                        <li> {t.team_name}</li>
+                                    // href needed?
+                                )
+                                }
+                            </ul>
+                            <br/>
+                            <h3>
+                                بازیکنان مرتبط با اخبار
+                            </h3>
+                            <ul>
+                                {this.props.related_players.map(t =>
+                                        <li> {t.player_name + " " + t.player_familyname}</li>
+                                    // href needed?
+                                )
+                                }
+                            </ul>
+
+                        </Col>
                     </Row>
 
                 </Grid>

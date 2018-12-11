@@ -7,9 +7,11 @@ class Extra extends Component {
     render() {
         return (
             <div>
-                <h3>
-                    آخرین اخبار
-                </h3>
+
+                <Col xs={8} md={7}>
+                    <h3>
+                        آخرین اخبار
+                    </h3>
                 <Carousel>
                     {this.props.related_news.map(img => <Carousel.Item>
                             <img width={300} height={300} alt="900x500" src={basket}/>
@@ -21,11 +23,14 @@ class Extra extends Component {
                         </Carousel.Item>
                     )}
 
-
                 </Carousel>
-                <h3>
-                    مورد علاقه‌ها
-                </h3>
+                </Col>
+
+                <Col xs={8} md={7}>
+
+                    <h3>
+                        مورد علاقه‌ها
+                    </h3>
                 <Carousel>
                     {this.props.latest_news.map(img => <Carousel.Item>
                             <img width={300} height={300} alt="900x500" src={basket}/>
@@ -39,27 +44,8 @@ class Extra extends Component {
 
 
                 </Carousel>
-                <h3>
-                    تیم های مرتبط با اخبار
-                </h3>
-                <ul>
-                    {this.props.related_teams.map(t =>
-                            <li> {t.team_name}</li>
-                        // href needed?
-                    )
-                    }
-                </ul>
-                <br/>
-                <h3>
-                    بازیکنان مرتبط با اخبار
-                </h3>
-                <ul>
-                    {this.props.related_players.map(t =>
-                            <li> {t.player_name + " " + t.player_familyname}</li>
-                        // href needed?
-                    )
-                    }
-                </ul>
+                </Col>
+
             </div>
         );
     }

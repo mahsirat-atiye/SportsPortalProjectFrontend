@@ -5,7 +5,7 @@ import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Main from "./Main";
 import Extra from "./Extra";
-
+import {Flex, Box} from 'reflexbox';
 export default class Page extends Component {
     constructor(props, context) {
         super(props, context);
@@ -96,9 +96,9 @@ export default class Page extends Component {
                     margin: '40px'
                 }}>{this.state.date}</h3>
                 {/*</marquee>*/}
-                <Grid>
-                    <Row>
-                        <Col md={8}>
+                <Flex p={1} wrap>
+                    <Box >
+
                             <Main
                                 sources={this.state.sources}
                                 text_of_news={this.state.text_of_news}
@@ -106,18 +106,22 @@ export default class Page extends Component {
                                 video={this.state.video}
                                 tags={this.state.tags}
                                 comments={this.state.comments}
-                            />
-                        </Col>
-                        <Col md={2}>
-                            <Extra
-                                related_news={this.state.related_news}
+
                                 related_players={this.state.related_players}
                                 related_teams={this.state.related_teams}
+
+                            />
+                    </Box>
+                        <Box >
+                            <Extra
+                                related_news={this.state.related_news}
+                                // related_players={this.state.related_players}
+                                // related_teams={this.state.related_teams}
                                 latest_news={this.state.latest_news}
                             />
-                        </Col>
-                    </Row>
-                </Grid>
+
+                    </Box>
+                </Flex>
             </div>
         );
     }
