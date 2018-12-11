@@ -28,9 +28,9 @@ const THEME = createMuiTheme({
     }
 });
 
-function createData(name, win, gs, gl, point, date) {
+function createData(name, post, age, gs) {
     counter += 1;
-    return {id: counter, name, win, gs, gl, point, date};
+    return {id: counter, name, post, age, gs};
 }
 
 function desc(a, b, orderBy) {
@@ -58,12 +58,10 @@ function getSorting(order, orderBy) {
 }
 
 const rows = [
-    {id: 'name', numeric: false, disablePadding: true, label: 'تیم مقابل'},
-    {id: 'win', numeric: true, disablePadding: false, label: 'برد'},
+    {id: 'name', numeric: false, disablePadding: true, label: 'نام بازیکن'},
+    {id: 'post', numeric: true, disablePadding: false, label: 'پست'},
+    {id: 'age', numeric: true, disablePadding: false, label: 'سن'},
     {id: 'gs', numeric: true, disablePadding: false, label: 'گل زده'},
-    {id: 'gl', numeric: true, disablePadding: false, label: 'گل خورده'},
-    {id: 'point', numeric: true, disablePadding: false, label: 'امتیاز'},
-    {id: 'date', numeric: true, disablePadding: false, label: 'تاریخ'},
 ];
 
 class EnhancedTableHead extends React.Component {
@@ -153,7 +151,7 @@ let EnhancedTableToolbar = props => {
             >
                 <div className={classes.title}>
                     <Typography variant="h6" id="tableTitle">
-                        بازی‌ها
+                        اعضای تیم
                     </Typography>
                 </div>
                 <div className={classes.spacer}/>
@@ -188,12 +186,9 @@ class EnhancedTable extends React.Component {
         orderBy: 'calories',
         selected: [],
         data: [
-            createData('استقلال تهران', 1, 1, 1, 1, '۱۷ شهریور ۱۳۹۷'),
-            createData('پرسپولیس', 1, 1, 1, 1, '۱۸ شهریور ۱۳۹۷'),
-            createData('تراکتورسازی تبریز', 1, 1, 1, 1, '۱۹ شهریور ۱۳۹۷'),
-            createData('استقلال اهواز', 1, 1, 1, 1, '۲۰ شهریور ۱۳۹۷'),
-            createData('سایپا تهران', 1, 1, 1, 1, '۲۱ شهریور ۱۳۹۷'),
-            createData('فولاد تهران', 1, 1, 1, 1, '۲۲ شهریور ۱۳۹۷'),
+            createData('لیونل مسی', 'حمله', 32, 20),
+            createData('ارنستو ولورده', 'سرمربی', 64, 0),
+            createData('لویی سوارز', 'هافبک', 29, 10),
         ],
         page: 0,
         rowsPerPage: 5,
@@ -287,11 +282,9 @@ class EnhancedTable extends React.Component {
                                                 <TableCell component="th" scope="row" padding="none">
                                                     {n.name}
                                                 </TableCell>
-                                                <TableCell numeric>{n.win}</TableCell>
+                                                <TableCell numeric>{n.post}</TableCell>
+                                                <TableCell numeric>{n.age}</TableCell>
                                                 <TableCell numeric>{n.gs}</TableCell>
-                                                <TableCell numeric>{n.gl}</TableCell>
-                                                <TableCell numeric>{n.point}</TableCell>
-                                                <TableCell numeric>{n.date}</TableCell>
                                             </TableRow>
                                         );
                                     })}

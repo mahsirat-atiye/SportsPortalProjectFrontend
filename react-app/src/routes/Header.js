@@ -49,8 +49,20 @@ class Header extends Component {
                     </Nav>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavItem eventKey={5} href="/test">
+                            <NavItem eventKey={9} href="/test">
                                 تست
+                            </NavItem>
+                            <NavItem eventKey={8} href="/game_info_basketball">
+                                مشاهده‌ی نتایج بازی بسکتبال
+                            </NavItem>
+                            <NavItem eventKey={7} href="/game_info_football">
+                                مشاهده‌ی نتایج بازی فوتبال
+                            </NavItem>
+                            <NavItem eventKey={6} href="/player_info_football">
+                                مشاهده‌ی بازیکن فوتبال
+                            </NavItem>
+                            <NavItem eventKey={5} href="/team_info">
+                                مشاهده‌ی تیم
                             </NavItem>
                             <NavDropdown eventKey={4} title="اخبار" id="basic-nav-dropdown">
                                 <MenuItem href="/news" style={{textAlign: "right"}} eventKey={4.1}>اخبار فوتبال</MenuItem>
