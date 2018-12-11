@@ -10,7 +10,11 @@ import League from "./routes/Leauge.js";
 import League_x from "./routes/League_x.js";
 import News from "./routes/news/Page.js";
 
-import test from "./routes/test.js";
+import test from "./routes/football/Game.js";
+import Game_Info_f from "./routes/football/Game.js";
+import Game_Info_b from "./routes/basketball/Basketballgamepage.js";
+import Player_Info_f from "./routes/football/Player.js";
+import Player_Info_b from "./routes/basketball/Basketballplayerpage.js";
 
 
 class App extends Component {
@@ -27,7 +31,10 @@ class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/league" component={League}/>
                     <Route path="/league_x" component={League_x}/>
-                    <Route path="/game_info" component={League_x}/>
+                    <Route path="/game_info_football" component={Game_Info_f}/>
+                    <Route path="/game_info_basketball" component={Game_Info_b}/>
+                    <Route path="/player_info_football" component={Player_Info_f}/>
+                    <Route path="/player_info_basketball" component={Player_Info_b}/>
                     <Route path="/team_info" component={Team}/>
                     <Route path="/news" component={News}/>
                     <Route path="/about" component={About}/>
