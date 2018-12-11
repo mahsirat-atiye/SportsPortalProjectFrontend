@@ -2,75 +2,17 @@ import React, {Component} from 'react';
 import {Row, Thumbnail, Button} from "react-bootstrap";
 import soobasa from "../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
+import {Flex, Box} from 'reflexbox';
+import Toggle from './news/Box.js';
+import ToggleGame from './news/Game.js';
 
 export default class Home extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            latest_news_football: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 1
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 2
-                },
-
-            ],
-            latest_news_basketball: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 3
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 4
-                },
-
-            ],
-            favorite_news_football: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 5
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 6
-                },
-
-            ],
-            favorite_news_basketball: [
-                {
-                    news_id: 2,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 7
-                },
-                {
-                    news_id: 12,
-                    news_title: "استقلال برد.",
-                    news_image_address: {soobasa},
-                    key: 8
-                },
-
-            ],
             all_games: [
                 {
-                    imageaddresses: [{soobasa}],
-                    time: "1976 Dec 17 , 13:30  ",
+                    time: "فوتبال، چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
                         {name: "استقلال"},
                         {name: "پرسپولیس"}
@@ -78,10 +20,10 @@ export default class Home extends Component {
                     key: 9
                 },
                 {
-                    time: "1976 Dec 17 , 13:30  ",
+                    time: "بسکتبال، چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
-                        {name: "استقلال"},
-                        {name: "پرسپولیس"}
+                        {name: "بسکتبال‌باز"},
+                        {name: "غیورمرد"}
                     ],
                     key: 10
                 }
@@ -89,19 +31,18 @@ export default class Home extends Component {
 
             favorite_games: [
                 {
-                    imageaddresses: [{soobasa}],
-                    time: "1976 Dec 17 , 13:30  ",
+                    time: "چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
-                        {name: "استقلال"},
-                        {name: "پرسپولیس"}
+                        {name: "تیم مورد علاقه ۳"},
+                        {name: "تیم ۴"}
                     ],
                     key: 11
                 },
                 {
-                    time: "1976 Dec 17 , 13:30  ",
+                    time: "چهارشنبه ۱۷ آذر ۱۳۹۷ - ۱۳:۳۰",
                     teams: [
-                        {name: "استقلال"},
-                        {name: "پرسپولیس"}
+                        {name: "تیم ۵"},
+                        {name: "تیم ۶"}
                     ],
                     key: 12
                 }
@@ -114,45 +55,44 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <Grid>
-                    <Row>
-                        <br/>
-                        <h3>بازی‌ها </h3>
-                        <hr/>
-                        <br/>
-                        <br/>
-                    </Row>
-                    <Row>
+                <Flex p={1} wrap>
+                    <Box w={[1, 2 / 3, 3 / 4]}>
+                        <h3>اخبار</h3>
+                        <Toggle f={'عطیه جمشیدپور'} e={'۱۲ آذر ۱۳۹۷'} a="خبر فوتبال" b='به گزارش "ورزش سه"، ستاره جوان فرانسوی که در یکی از جلسات تمرینی بارسا به دلیل شب بیداری غیبت کرده بود، تا آستانه اخراج از بارسلونا نیز پیش رفت اما در نهایت تصمیم بر این شد که به او فرصتی جدید داده شود.
+
+دمبله هم با جدی گرفتن این اخطار حالا به بهترین روزهای خود برگشته است. او شب گذشته در پیروزی 4-0 بارسا برابر اسپانیول زننده گل دوم بود. گلی که از روی پاس مسی به دست آمد.'/>
+                        <Toggle f={'علی نجیمی'} e={'۱۳ آذر ۱۳۹۷'} a='خبر فوتبال مورد علاقه' b='به گزارش "ورزش سه" و به نقل از پایگاه خبری فوتسال ایران، در حالی که تغییر نسل عجیبی پس از جدایی افتخاری و حضور علی کفاشیان در کمیته فوتسال رخ داد، یکی از دوست داشتنی‌ترین اعضاء این کمیته با حالتی غریبانه خانه‌نشین شد تا کمتر خبری از او به میان آید.
+مرتضی درودیان که از داوران باسابقه فوتسال ایران بوده و با رفتار مهربانانه و نوع صحبت کردن دلنشینش محبوب اهالی قدیم و جدید فوتسال است، با اقدام ارزنده صادق درودگر مورد تجلیل قرار گرفت.
+صادق درودگر در مراسمی که با حضور جمعی از اهالی فوتسال در تهران برگزار کرد از این مرد زحمتکش روزهای نه چندان دور فوتسال ایران تجلیل کرد و لحظات خوشی را برای وی رقم زد.
+گفتنی است درودیان چندی قبل بر اثر حادثه‌ای دچار شکستگی و جراحات شدید در ناحیه سر شده بود که وی را خانه‌نشین کرده بود اما با سری بانداژ شده در میان فوتسالی‌ها حاضر و با مرور خاطراتش با اهالی این رشته شاد شد.' c='football' d={true}/>
+                        <Toggle f={'عطیه جمشیدپور'} e={'۱۴ آذر ۱۳۹۷'} a='خبر بسکتبال' b='به گزارش "ورزش سه"، حساسیت دیدار سپاهان و پرسپولیس سبب شد، کمیته داوران از علیرضا فغانی یکی از بهترین داوران فوتبال جهان برای قضاوت این مسابقه استفاده کند تا احتمال حرف و حدیث ها را پس از این مسابقه حساس به پایین ترین حد ممکن برساند، ولی اشتباه فغانی روی اعلام پنالتی به سود پرسپولیس سبب شد تا انتقادات فراوانی از این داور بین المللی فوتبال کشور انجام شود.' c='basketball'/>
+                        <Toggle f={'علی نجیمی'} e={'۱۵ آذر ۱۳۹۷'} a='خبر بسکتبال مورد علاقه' b='به گزارش "ورزش سه"، حساسیت دیدار سپاهان و پرسپولیس سبب شد، کمیته داوران از علیرضا فغانی یکی از بهترین داوران فوتبال جهان برای قضاوت این مسابقه استفاده کند تا احتمال حرف و حدیث ها را پس از این مسابقه حساس به پایین ترین حد ممکن برساند، ولی اشتباه فغانی روی اعلام پنالتی به سود پرسپولیس سبب شد تا انتقادات فراوانی از این داور بین المللی فوتبال کشور انجام شود.' c='basketball' d={true}/>
+                    </Box>
+                    <Box order={2} p={[1, 2, 3]} w={[1 / 2, 1 / 3, 1 / 4]}>
+                        <h3>بازی‌های تمام‌شده</h3>
                         {
                             this.state.all_games.map(g =>
-                                <Thumbnail src={soobasa} alt="242x200" key={g.key}>
-                                    {/*todo img addressing*/}
-                                    <h3>{g.teams[0].name + " و " + g.teams[1].name}</h3>
-                                    <p>{g.time}</p>
-
-                                    <Button bsStyle="danger">Like</Button>
-                                    <Button bsStyle="success">More Info</Button>
-
-                                </Thumbnail>
+                                <ToggleGame a={g.time} b={g.teams[0].name + " ۲ - ۳ " + g.teams[1].name}/>
                             )
                         }
-                    </Row>
-
-                    <Row>
-                        {
-                            this.state.favorite_games.map(g =>
-                                <Thumbnail src={soobasa} alt="242x200" key={g.key}>
-                                    {/*todo img addressing*/}
-                                    <h3>{g.teams[0].name + " و " + g.teams[1].name}</h3>
-                                    <p>{g.time}</p>
-                                    <p>
-                                        <Button bsStyle="success">More Info</Button>
-                                    </p>
-                                </Thumbnail>
-                            )
-                        }
-                    </Row>
-                </Grid>
+                        <h3>بازی‌های درجریان</h3>
+                        <Row>
+                            {
+                                this.state.all_games.map(g =>
+                                    <ToggleGame a={g.time} b={g.teams[0].name + " ۰ - ۰ " + g.teams[1].name}/>
+                                )
+                            }
+                        </Row>
+                        <h3>بازی‌های آینده</h3>
+                        <Row>
+                            {
+                                this.state.favorite_games.map(g =>
+                                    <ToggleGame a={g.time} b={g.teams[0].name + " - " + g.teams[1].name}/>
+                                )
+                            }
+                        </Row>
+                    </Box>
+                </Flex>
             </div>
         );
     }

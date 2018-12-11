@@ -1,5 +1,6 @@
 import React from "react";
-import { Col, Fa }  from "mdbreact";
+import { Fa }  from "mdbreact";
+import {Col} from "react-bootstrap";
 //import "./style.css";
 
 class Searchbox extends React.Component {
@@ -15,7 +16,7 @@ class Searchbox extends React.Component {
                     <input
                         className="form-control my-0 py-1"
                         type="text"
-                        placeholder="Search"
+                        placeholder="جستجوی لیگ"
                         aria-label="Search"
                     />
                 </div>

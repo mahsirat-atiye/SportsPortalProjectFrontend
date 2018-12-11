@@ -59,11 +59,9 @@ class Header extends Component {
                                 <MenuItem style={{textAlign: "right"}} eventKey={4.3}>آرشیو</MenuItem>
                             </NavDropdown>
                             <NavDropdown eventKey={3} title="جداول لیگ‌ها" id="basic-nav-dropdown">
-                                <MenuItem href="/league" style={{textAlign: "right"}} eventKey={3.1}>لیگ برتر فوتبال ۱۳۹۷</MenuItem>
-                                <MenuItem style={{textAlign: "right"}} eventKey={3.2}>لیگ برتر بسکتبال ۱۳۹۷</MenuItem>
+                                <MenuItem href="/league_x" style={{textAlign: "right"}} eventKey={3.1}>لیگ برتر فوتبال ۱۳۹۷</MenuItem>
                                 <MenuItem divider/>
-                                <MenuItem style={{textAlign: "right"}} eventKey={3.3}>لیگ‌های قدیمی فوتبال</MenuItem>
-                                <MenuItem style={{textAlign: "right"}} eventKey={3.4}>لیگ‌های قدیمی بسکتبال</MenuItem>
+                                <MenuItem href="/league" style={{textAlign: "right"}} eventKey={3.2}>تمامی لیگ‌ها</MenuItem>
                             </NavDropdown>
                             <NavItem eventKey={1} href="/">
                                 صفحه اصلی

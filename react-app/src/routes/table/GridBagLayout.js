@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Flex, Box} from 'reflexbox';
-import Toggle from './Box.js';
-import Demo1 from '../table/retable.js';
-import Demo2 from '../table/retable_filter.js';
+import Toggle from '../news/Box.js';
+import Demo1 from './table_league.js';
+import Demo2 from './retable_filter.js';
 
 export default class AlignItemsBasics extends Component {
     render() {
