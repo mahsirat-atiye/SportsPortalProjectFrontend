@@ -3,12 +3,12 @@ import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstr
 import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Statistics from "./Statistics";
-import Comparisontable_football from "../../components/Comparisontable_football";
-import Saved_and_main_players_table_football from "../../components/Saved_and_main_players_table_football";
+import Comparisontable_football from "../../components_/Comparisontable_football";
+import Saved_and_main_players_table_football from "../../components_/Saved_and_main_players_table_football";
 import Togglingnews from "../news/Toggle";
 import Videoplayer from "../tools/VideoPlayer";
-import Timeline_ from "../../components/Timeline_";
-import Playercharacteristics from "../../components/Playercharacteristics";
+import Timeline_ from "../../components_/Timeline_";
+import Playercharacteristics from "../../components_/Playercharacteristics";
 
 class Game extends Component {
 

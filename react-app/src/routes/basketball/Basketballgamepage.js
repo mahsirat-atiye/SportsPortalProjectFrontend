@@ -3,14 +3,14 @@ import {Carousel, Media, Col, Row, ListGroup, ListGroupItem} from "react-bootstr
 import basket from "../../images/basket.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Statistics from "../football/Statistics";
-import Comparisontable_football from "../../components/Comparisontable_football";
-import Saved_and_main_players_table_football from "../../components/Saved_and_main_players_table_football";
+import Comparisontable_football from "../../components_/Comparisontable_football";
+import Saved_and_main_players_table_football from "../../components_/Saved_and_main_players_table_football";
 import sss from "../news/Toggle";
 import Videoplayer from "../tools/VideoPlayer";
-import Timeline_ from "../../components/Timeline_";
-import Playercharacteristics from "../../components/Playercharacteristics";
-import Comparisontable_basketball from "../../components/Comparisontable_basketball";
-import Saved_and_main_players_table_basketball from "../../components/Saved_and_main_players_table_basketball";
+import Timeline_ from "../../components_/Timeline_";
+import Playercharacteristics from "../../components_/Playercharacteristics";
+import Comparisontable_basketball from "../../components_/Comparisontable_basketball";
+import Saved_and_main_players_table_basketball from "../../components_/Saved_and_main_players_table_basketball";
 
 class Basketballgamepage extends Component {
 

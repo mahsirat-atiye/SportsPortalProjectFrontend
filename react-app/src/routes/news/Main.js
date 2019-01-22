@@ -4,7 +4,7 @@ import basket from "../../images/basket.jpg"
 import soobasa from "../../images/soobasa.jpg"
 import Grid from "react-bootstrap/es/Grid";
 import Videoplayer from "../tools/VideoPlayer";
-import Commentbox from "../../components/Commentbox";
+import Commentbox from "../../components_/Commentbox";
 import Extra from "./Extra";
 import {Box} from "reflexbox";
 

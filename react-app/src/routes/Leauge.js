@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Tablee from './table/table_league.js';
 import {Panel, PanelGroup} from "react-bootstrap";
-import SearchBox from '../components/Searchbox.js';
+import SearchBox from '../components_/Searchbox.js';
 
 export default class Leauge extends Component {
     constructor(props, context) {
