@@ -16,6 +16,7 @@ import Game_Info_f from "./routes/football/Game.js";
 import Game_Info_b from "./routes/basketball/Basketballgamepage.js";
 import Player_Info_f from "./routes/football/Player.js";
 import Player_Info_b from "./routes/basketball/Basketballplayerpage.js";
+import TestDjango from "./components/TestDjango";
 
 
 class App_ extends Component {
@@ -33,6 +34,7 @@ class App_ extends Component {
                     }}>
 
                     <Header/>
+                    {/*<Route exact path="/" component={TestDjango}/>*/}
                     <Route exact path="/" component={Home}/>
                     <Route path="/league" component={League}/>
                     <Route path="/league_x" component={League_x}/>
@@ -46,6 +48,7 @@ class App_ extends Component {
                     <Route path="/about" component={About}/>
                     <Route path="/contact" component={Contact}/>
                     <Route path="/test" component={test}/>
+
                 </div>
             </Router>
 

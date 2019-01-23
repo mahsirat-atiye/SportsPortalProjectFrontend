@@ -6,17 +6,26 @@ import Grid from "react-bootstrap/es/Grid";
 import Main from "./Main";
 import Extra from "./Extra";
 import {Flex, Box} from 'reflexbox';
+import Table from "../../components/Table";
+import DataProvider from "../../components/DataProvider";
+import Table_ from "../../components/Table_";
+import key from "weak-key";
+
 export default class Page extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
+            //          title = models.CharField(max_length=100)
+            // text = models.TextField()
+            // publish_date = models.DateTimeField(auto_now_add=True)
+
 
             comments: [{text: "Very Good"}, {text: "Good"}],
 
-            title_: "علی دایی کاپ قهرمانی را برد",
-            date: "سه شنبه، 14 آذر ماه",
+            // title_: "علی دایی کاپ قهرمانی را برد",
+            // date: "سه شنبه، 14 آذر ماه",
             sources: ["لولو", "خبرگذاری ایسنا"],
-            text_of_news: "سوباسا",
+            // text_of_news: "سوباسا",
             imageaddresses: [{soobasa}, {basket}, {basket}, {basket}],
             video: "https://media.w3.org/2010/05/sintel/trailer_hd.mp4",
             tags: ["tag1", "tag2", "tag3"],
@@ -75,7 +84,8 @@ export default class Page extends Component {
                     player_name: "علیرضا",
                     player_familyname: "بیرانوند"
                 },
-            ]
+            ],
+
 
         }
     }
@@ -83,45 +93,57 @@ export default class Page extends Component {
     render() {
         return (
             <div>
-                <h1 style={{
-                    // fontSize: '130px',
-                    textAlign: 'center',
-                    fontStyle: 'italic',
-                    margin: '40px'
-                }}>{this.state.title_} </h1>
-                <h3 style={{
-                    // fontSize: '130px',
-                    textAlign: 'center',
-                    fontStyle: 'italic',
-                    margin: '40px'
-                }}>{this.state.date}</h3>
-                {/*</marquee>*/}
+                <DataProvider endpoint="api/news"
+                              render={data =>
+                                  <div>
+                                      {Object.entries(data[0]).filter(el => el[0] === "title").map(e => <h1
+                                          style={{
+                                              // fontSize: '130px',
+                                              textAlign: 'center',
+                                              fontStyle: 'italic',
+                                              margin: '40px'
+                                          }}>{e[1]}</h1>)}
+                                      {Object.entries(data[0]).filter(el => el[0] === "publish_date")
+                                          .map(e => < h3 style={{
+                                              // fontSize: '130px',
+                                              textAlign: 'center',
+                                              fontStyle: 'italic',
+                                              margin: '40px'
+                                          }}>{e[1]}</h3>)}
+                                  </div>}/>
                 <Flex p={1} wrap>
-                    <Box >
+                    <Box>
 
-                            <Main
-                                sources={this.state.sources}
-                                text_of_news={this.state.text_of_news}
-                                imageaddresses={this.state.imageaddresses}
-                                video={this.state.video}
-                                tags={this.state.tags}
-                                comments={this.state.comments}
+                        <Main
+                            sources={this.state.sources}
+                            text_of_news={this.state.text_of_news}
+                            imageaddresses={this.state.imageaddresses}
+                            video={this.state.video}
+                            tags={this.state.tags}
+                            comments={this.state.comments}
 
-                                related_players={this.state.related_players}
-                                related_teams={this.state.related_teams}
+                            related_players={this.state.related_players}
+                            related_teams={this.state.related_teams}
 
-                            />
+                        />
                     </Box>
-                        <Box >
-                            <Extra
-                                related_news={this.state.related_news}
-                                // related_players={this.state.related_players}
-                                // related_teams={this.state.related_teams}
-                                latest_news={this.state.latest_news}
-                            />
+
+
+                    <Box>
+                        <Extra
+                            related_news={this.state.related_news}
+                            // related_players={this.state.related_players}
+                            // related_teams={this.state.related_teams}
+                            latest_news={this.state.latest_news}
+                        />
 
                     </Box>
                 </Flex>
+                <DataProvider endpoint="api/news/"
+                              render={data => <Table data={data}/>}/>
+                <DataProvider endpoint="api/lead/"
+                              render={data => <Table_ data={data}/>}/>
+
             </div>
         );
     }
